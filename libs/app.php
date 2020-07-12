@@ -8,7 +8,6 @@ class App{
         $url = isset($_GET['url'])? $_GET['url']: null;
         $url = rtrim($url, '/');
         $url = explode('/', $url);
-        echo $url[0];
         if(empty($url[0])){
             $archivoController = 'controllers/index.php';
             require $archivoController;

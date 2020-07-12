@@ -1,6 +1,6 @@
 <?php
 
-define('URL', 'http://localhost/mvc-template/');
+define('URL', 'http://localhost/miProyecto/');
 
 define('HOST', 'localhost');
 define('DB', 'mvc');
