@@ -10,7 +10,7 @@ class App{
         $url = explode('/', $url);
         if(empty($url[0])){
             $archivoController = 'controllers/index.php';
-            require $archivoController;
+            require_once $archivoController;
             $controller = new Index();
             $controller->render();
             $controller->loadModel('index');
@@ -20,7 +20,7 @@ class App{
         }
  
         if(file_exists($archivoController)){
-            require $archivoController;
+            require_once $archivoController;
 
             $controller = new $url[0];
             $controller->loadModel($url[0]);
