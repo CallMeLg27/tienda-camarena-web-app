@@ -1,8 +1,8 @@
 <?php
 
+require 'models/producto.php';
 
-
-class ProductoModel extends Model{
+class CrudProductoModel extends Model{
 
     public function __construct(){
         parent::__construct();

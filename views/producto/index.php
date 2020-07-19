@@ -38,18 +38,20 @@
          </div>
     </section>
   </div>               
-
+        <div class="d-flex justify-content-center">
+            <p><?php echo $this->mensaje; ?></p>
+        </div>
         <div class="d-flex justify-content-center">
             <h2 style="color:##09ea1a"><strong>Registra tus productos</strong></h2>
         </div>
-        <form>
+        <form action="<?php echo constant('URL'); ?>crudproducto/crear" method="POST">
             <div class="col-md-6" style="margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom:auto">
                 <div class="form-row py-2">
                     <div class="col-md-4">
                         <p><strong>CÓDIGO:</strong></p>
                     </div>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" placeholder="Ingrese su código...">
+                        <input name="producto_id" type="text" class="form-control" placeholder="Ingrese su código...">
                     </div>
                 </div>
                 <div class="form-row py-2">
@@ -57,7 +59,7 @@
                         <p><strong>NOMBRE:</strong></p>
                     </div>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" placeholder="Ingrese su nombre...">
+                        <input name="nombre" type="text" class="form-control" placeholder="Ingrese su nombre...">
                     </div>
                 </div>
                 <div class="form-row py-2">
@@ -65,7 +67,7 @@
                         <p><strong>COSTO:</strong></p>
                     </div>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" placeholder="Ingrese el costo...">
+                        <input name="costo" type="number" class="form-control" placeholder="Ingrese el costo...">
                     </div>
                 </div>
                 <div class="form-row py-2">
@@ -73,7 +75,7 @@
                         <p><strong>DESCRIPCIÓN:</strong></p>
                     </div>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" placeholder="Descripción...">
+                        <input name="descripcion" type="text" class="form-control" placeholder="Descripción...">
                     </div>
                 </div>
                 <div class="form-row py-2">
@@ -81,12 +83,12 @@
                         <p><strong>CANTIDAD:</strong></p>
                     </div>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" placeholder="Ingrese la cantidad...">
+                        <input name="cantidad" type="number" class="form-control" placeholder="Ingrese la cantidad...">
                     </div>
                 </div>
                     <div class="d-flex flex-row justify-content-center mt-4">
                     <div class="col-md-4">
-                        <button type="button" class="btn btn-primary btn-block"><i class="fas fa-plus-circle"></i> AÑADIR</button>
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-plus-circle"></i> AÑADIR</button>
                     </div>
                 </div>
             </div>

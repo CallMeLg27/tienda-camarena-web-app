@@ -1,5 +1,5 @@
 <?php
-class Producto extends Controller{
+class CRUDProducto extends Controller{
 
     function __construct(){
         parent::__construct();
@@ -7,7 +7,7 @@ class Producto extends Controller{
     }
 
     function render(){
-    		$productos = $this->view->datos = $this->model->get();
+    	$productos = $this->view->datos = $this->model->get();
         $this->view->productos = $productos;
         $this->view->render('producto/index');
     }
@@ -80,5 +80,8 @@ class Producto extends Controller{
         echo $mensaje;
     }
 
+    function validarProducto($producto_id, $nombre, $descripcion, $cantidad, $costo){
+
+    }
 }
 ?>
