@@ -1,4 +1,5 @@
 <?php
+
 class CRUDProducto extends Controller{
 
     function __construct(){
@@ -13,19 +14,35 @@ class CRUDProducto extends Controller{
     }
 
     function crear(){
-        $producto_id = $_POST['producto_id'];
-        $nombre      = $_POST['nombre'];
-        $descripcion = $_POST['descripcion'];
-        $cantidad    = $_POST['cantidad'];
-        $costo       = $_POST['costo'];
+        // $producto_id = $_POST['producto_id'];
+        // $nombre      = $_POST['nombre'];
+        // $descripcion = $_POST['descripcion'];
+        // $cantidad    = $_POST['cantidad'];
+        // $costo       = $_POST['costo'];
 
-        if($this->model->insert(['producto_id' => $producto_id, 'nombre' => $nombre, 'descripcion' => $descripcion, 'cantidad' => $cantidad, 'costo' => $costo])){
+        $nuevo_producto = new Producto;
+        $nuevo_producto->producto_id = $_POST['producto_id'];
+        $nuevo_producto->nombre = $_POST['nombre'];
+        $nuevo_producto->descripcion = $_POST['descripcion'];
+        $nuevo_producto->cantidad = $_POST['cantidad'];
+        $nuevo_producto->costo = $_POST['costo'];
+
+        // Se valida el producto antes de intentar agregarlo a la BD
+        if (!$this->validarProducto($nuevo_producto)){
+            $this->view->mensaje = "Producto no se pudo crear, fallo en la validacion";
+            $this->render();
+            return;
+        }
+
+        // Se intenta añadir el producto a la BD
+        if($this->model->insert(['producto_id' => $nuevo_producto->producto_id, 'nombre' => $nuevo_producto->nombre, 'descripcion' => $nuevo_producto->descripcion, 'cantidad' => $nuevo_producto->cantidad, 'costo' => $nuevo_producto->costo])){
             //header('location: '.constant('URL').'nuevo/productoCreado');
             $this->view->mensaje = "Producto creado correctamente";
+            
            	// $this->view->render('producto/index');
            	$this->render();
         }else{
-        	  $this->view->mensaje = "Producto no se pudo crear";
+        	$this->view->mensaje = "Error! Producto ya existe";
             $this->render();
         }
     }
@@ -80,8 +97,13 @@ class CRUDProducto extends Controller{
         echo $mensaje;
     }
 
-    function validarProducto($producto_id, $nombre, $descripcion, $cantidad, $costo){
-
+    function validarProducto($producto=null){
+        if(true){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
 ?>
