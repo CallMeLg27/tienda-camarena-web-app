@@ -51,7 +51,7 @@
                         <p><strong>CÓDIGO:</strong></p>
                     </div>
                     <div class="col-md-8">
-                        <input name="producto_id" type="text" class="form-control" placeholder="Ingrese su código...">
+                        <input required name="producto_id" type="text" class="form-control" placeholder="Ingrese su código...">
                     </div>
                 </div>
                 <div class="form-row py-2">
@@ -59,7 +59,7 @@
                         <p><strong>NOMBRE:</strong></p>
                     </div>
                     <div class="col-md-8">
-                        <input name="nombre" type="text" class="form-control" placeholder="Ingrese su nombre...">
+                        <input required name="nombre" type="text" class="form-control" placeholder="Ingrese su nombre...">
                     </div>
                 </div>
                 <div class="form-row py-2">
@@ -67,7 +67,7 @@
                         <p><strong>COSTO:</strong></p>
                     </div>
                     <div class="col-md-8">
-                        <input name="costo" type="number" class="form-control" placeholder="Ingrese el costo...">
+                        <input required name="costo" type="number" class="form-control" placeholder="Ingrese el costo...">
                     </div>
                 </div>
                 <div class="form-row py-2">
@@ -75,7 +75,7 @@
                         <p><strong>DESCRIPCIÓN:</strong></p>
                     </div>
                     <div class="col-md-8">
-                        <input name="descripcion" type="text" class="form-control" placeholder="Descripción...">
+                        <input required name="descripcion" type="text" class="form-control" placeholder="Descripción...">
                     </div>
                 </div>
                 <div class="form-row py-2">
@@ -83,7 +83,7 @@
                         <p><strong>CANTIDAD:</strong></p>
                     </div>
                     <div class="col-md-8">
-                        <input name="cantidad" type="number" class="form-control" placeholder="Ingrese la cantidad...">
+                        <input required name="cantidad" type="number" class="form-control" placeholder="Ingrese la cantidad...">
                     </div>
                 </div>
                     <div class="d-flex flex-row justify-content-center mt-4">
