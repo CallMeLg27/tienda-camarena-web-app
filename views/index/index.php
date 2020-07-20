@@ -9,13 +9,13 @@
 </head>
 <body>
 
-    <?php require 'views/header.php'; ?>
+    <?php require_once 'views/header.php'; ?>
 
     <div id="main">
         <h1 class="center">Bienvenido al sitio</h1>
     </div>
 
-    <?php require 'views/footer.php'; ?>
+    <?php require_once 'views/footer.php'; ?>
     
 </body>
 </html>

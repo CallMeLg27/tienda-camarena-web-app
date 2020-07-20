@@ -108,41 +108,33 @@
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">P001</th>
-                            <td>AGUA SAN MATEO 600ML</td>
-                            <td>DISTRIBUIDORA BACKUS</td>
-                            <td>15</td>
-                            <td>200</td>
-                            <td>
-                                <div role="group" class="mb-2 btn-group-md btn-group">
-                                    <button class="btn-shadow btn-hover-shine btn btn-success btn-md btn-pill pl-3" title="Editar" ">
-                                        <i class="fa fa-pencil" aria-hidden="true"></i>
-                                    </button>
-                                    <button class="btn-shadow btn-hover-shine btn btn-danger btn-md btn-pill pr-3" title="Eliminar">
-                                        <i class="fa fa-trash" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">P002</th>
-                            <td>LECHE GLORIA CHICA</td>
-                            <td>TARRO</td>
-                            <td>3.2</td>
-                            <td>300</td>
-                            <td>
-                                <div role="group" class="mb-2 btn-group-md btn-group">
-                                    <button class="btn-shadow btn-hover-shine btn btn-success btn-md btn-pill pl-3" title="Editar" ">
-                                        <i class="fa fa-pencil" aria-hidden="true"></i>
-                                    </button>
-                                    <button class="btn-shadow btn-hover-shine btn btn-danger btn-md btn-pill pr-3" title="Eliminar">
-                                        <i class="fa fa-trash" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                    <tbody id="tbody-productos">
+                        <?php
+                            require_once 'models/producto.php';
+                            foreach ($this->productos as $row) {
+                                $producto = new Producto();
+                                $producto = $row;
+                        ?>
+                                <tr id="fila-<?php echo $producto->producto_id; ?>">
+                                    <td><?php echo $producto->producto_id; ?></td>
+                                    <td><?php echo $producto->nombre; ?></td>
+                                    <td><?php echo $producto->descripcion; ?></td>
+                                    <td><?php echo $producto->costo; ?></td>
+                                    <td><?php echo $producto->cantidad; ?></td>
+                                    <td>
+                                        <div role="group" class="mb-2 btn-group-md btn-group">
+                                            <button class="btn-shadow btn-hover-shine btn btn-success btn-md btn-pill pl-3" title="Editar">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                            </button>
+                                            <button data-producto_id="<?php echo $producto->producto_id; ?>" class="bEliminar btn-shadow btn-hover-shine btn btn-danger btn-md btn-pill pr-3" title="Eliminar">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <!-- <td><a href="<?php echo constant('URL') . 'crudproducto/verProducto/' . $producto->producto_id; ?>">Actualizar</a></td>
+                                    <td><button class="bEliminar" data-matricula="<?php echo $producto->producto_id; ?>">Eliminar</button></td> --> 
+                                </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
@@ -150,6 +142,7 @@
     </center>    
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="<?php echo constant('URL'); ?>/public/js/main.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-require 'models/producto.php';
+require_once 'models/producto.php';
 
 class CrudProductoModel extends Model{
 
