@@ -9,7 +9,7 @@
 // define('CHARSET', 'utf8mb4');
 
 // --deployed
-define('URL', 'https://mysql2727.herokuapp.com/');
+define('URL', 'https://tienda-macarena.herokuapp.com/');
 define('HOST', 'us-cdbr-east-02.cleardb.com');
 define('DB', 'heroku_ba968b3eda52761');
 define('USER', 'b3d547a75782db');
