@@ -14,11 +14,6 @@ class CRUDProducto extends Controller{
     }
 
     function crear(){
-        // $producto_id = $_POST['producto_id'];
-        // $nombre      = $_POST['nombre'];
-        // $descripcion = $_POST['descripcion'];
-        // $cantidad    = $_POST['cantidad'];
-        // $costo       = $_POST['costo'];
 
         $nuevo_producto = new Producto;
         $nuevo_producto->producto_id = $_POST['producto_id'];
@@ -52,7 +47,7 @@ class CRUDProducto extends Controller{
         $producto = $this->model->getById($idProducto);
 
         session_start();
-        $_SESSION["id_verProducto"] = $producto->matricula;
+        $_SESSION["id_verProducto"] = $producto->producto_id;
 
         $this->view->producto = $producto;
         $this->view->render('consulta/detalle');
@@ -60,20 +55,25 @@ class CRUDProducto extends Controller{
 
     function actualizarProducto($param = null){
         session_start();
-        $matricula = $_SESSION["id_verProducto"];
-        $nombre    = $_POST['nombre'];
-        $apellido  = $_POST['apellido'];
-
+        $producto_por_actualizar = new Producto;
+        $producto_por_actualizar->producto_id = $_SESSION["id_verProducto"];
+        $producto_por_actualizar->nombre = $_POST['nombre'];
+        $producto_por_actualizar->descripcion = $_POST['descripcion'];
+        $producto_por_actualizar->cantidad = $_POST['cantidad'];
+        $producto_por_actualizar->costo = $_POST['costo'];
 
         unset($_SESSION['id_verProducto']);
 
-        if($this->model->update(['matricula' => $matricula, 'nombre' => $nombre, 'apellido' => $apellido])){
-            $producto = new Producto();
-            $producto->matricula = $matricula;
-            $producto->nombre = $nombre;
-            $producto->apellido = $apellido;
+        // Se valida el producto antes de intentar agregarlo a la BD
+        if (!$this->validarProducto($producto_por_actualizar)){
+            $this->view->mensaje = "Producto no se pudo actualizar, fallo en la validacion";
+            $this->render();
+            return;
+        }
 
-            $this->view->producto = $producto;
+        if($this->model->update(['producto_id' => $producto_por_actualizar->producto_id, 'nombre' => $producto_por_actualizar->nombre, 'descripcion' => $producto_por_actualizar->descripcion, 'cantidad' => $producto_por_actualizar->cantidad, 'costo' => $producto_por_actualizar->costo])){
+
+            $this->view->producto = $producto_por_actualizar;
             $this->view->mensaje = "Producto actualizado correctamente";
         }else{
             $this->view->mensaje = "No se pudo actualizar al producto";
@@ -82,9 +82,9 @@ class CRUDProducto extends Controller{
     }
 
     function eliminarProducto($param = null){
-        $matricula = $param[0];
+        $producto_id = $param[0];
 
-        if($this->model->delete($matricula)){
+        if($this->model->delete($producto_id)){
             $mensaje ="Producto eliminado correctamente";
             //$this->view->mensaje = "Producto eliminado correctamente";
         }else{
