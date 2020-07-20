@@ -11,7 +11,7 @@
 // --deployed
 define('URL', 'https://mysql2727.herokuapp.com/');
 define('HOST', 'us-cdbr-east-02.cleardb.com');
-define('DB', 'heroku_1401742a30af2c1');
+define('DB', 'heroku_ba968b3eda52761');
 define('USER', 'b078eb90b93752');
 define('PASSWORD', "92da2499");
 define('CHARSET', 'utf8mb4');
