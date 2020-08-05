@@ -6,17 +6,23 @@
         <title>Menu Principal - Tienda Camarena</title>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-        <!--CDN Bootstrap (CSS)-->
+         <!--CDN Bootstrap (CSS)-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
-        
+
+        <!--CDN JQuery,Popper,Bootstrap (JS)-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
         <!-- Los iconos tipo Solid de Fontawesome-->
-        <link rel="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+        <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         
         <!-- Nuestros css-->
-        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css/main.css">
-        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css/index.css">
-        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css//user_admin.css">
+        <link rel="stylesheet" type="text/css" href="public/css/index.css" th:href="@{/css/index.css}">
+        <link rel="stylesheet" type="text/css" href="public/css/user_admin.css" th:href="@{/css/user_admin.css}">
     </head>
     <body>
 	    <?php require 'views/header.php'; ?>

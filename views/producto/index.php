@@ -11,12 +11,13 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
         
         <!-- Los iconos tipo Solid de Fontawesome-->
-        <link rel="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+        <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script> -->
 
         <!-- Nuestros css-->
-        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css/main.css">
-        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css/index.css">
-        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css//user_admin.css">
+        <link rel="stylesheet" type="text/css" href="public/css/index.css" th:href="@{/css/index.css}">
+        <link rel="stylesheet" type="text/css" href="public/css/user_admin.css" th:href="@{/css/user_admin.css}">
+        <link rel="stylesheet" type="text/css" href="public/css/main.css" th:href="@{/css/main.css}">
     </head>
     <body>
         <?php require_once 'views/header.php'; ?>
@@ -137,6 +138,12 @@
         </div>
     </center>
     <?php require_once 'views/footer.php'; ?>
+    <!--CDN JQuery,Popper,Bootstrap (JS)-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/27d40e429f.js" crossorigin="anonymous"></script>
+    <script src="<?php echo constant('URL'); ?>/public/js/main.js"></script>
 </body>
 
 </html>

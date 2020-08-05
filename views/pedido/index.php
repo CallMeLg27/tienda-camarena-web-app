@@ -14,6 +14,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/27d40e429f.js" crossorigin="anonymous"></script>
+
+    <!-- Nuestros css-->
+    <link rel="stylesheet" type="text/css" href="public/css/index.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" type="text/css" href="public/css/user_admin.css" th:href="@{/css/user_admin.css}">
+    <link rel="stylesheet" type="text/css" href="public/css/main.css" th:href="@{/css/main.css}">
 </head>
 
 <body>
