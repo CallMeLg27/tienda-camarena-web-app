@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mini Market Camarena</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tienda Camarena</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <!--CDN Bootstrap (CSS)-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-</head>
+        <!--CDN Bootstrap (CSS)-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
-<body>
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#0bad65">
-        <a class="navbar-brand" href="">
-            <h1>
-                <i class="fas fa-shopping-cart"></i>
-                CAMARENA
-            </h1>
-        </a>
-    </nav>
+        <!-- Los iconos tipo Solid de Fontawesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+        <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        
+        <!-- Nuestros css-->
+        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css/main.css">
+        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css/index.css">
+        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css//user_admin.css">
+    </head>
+    <body>
+        <?php require_once 'views/header.php'; ?>
  <div class="container d-flex flex-row-reverse" style="padding-top:100px">
     <section class="row">    
         <div class="form-row " > 
@@ -136,14 +137,7 @@
             </div>
         </div>
     </center>
-    <!--CDN JQuery,Popper,Bootstrap (JS)-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/27d40e429f.js" crossorigin="anonymous"></script>
-    <!-- <script src="js/jquery.js"></script> -->
-    <!-- <script src="js/bootstrap.min.js"></script> -->
-    <script src="<?php echo constant('URL'); ?>/public/js/main.js"></script>
+    <?php require_once 'views/footer.php'; ?>
 </body>
 
 </html>

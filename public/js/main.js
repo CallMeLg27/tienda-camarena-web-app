@@ -32,13 +32,11 @@ botonesEditar.forEach(item => {
     // const confirm = window.confirm("Deseas eliminar el elemento?");
     if (item.estado == 1) {
 
-      // fila.innerHTML = "<form action=\"<?php echo constant('URL'); ?>crudproducto/actualizarProducto/\" method=\"POST\">" + fila.innerHTML;
       fila.cells[0].innerHTML = `<td><input style="width: 60px" name='producto_id' value='${fila.cells[0].innerText}'></td>`;
       fila.cells[1].innerHTML = `<td><input style="width: 200px" name='nombre' value='${fila.cells[1].innerText}'></td>`;
       fila.cells[2].innerHTML = `<td><input style="width: 200px" name='descripcion' value='${fila.cells[2].innerText}'></td>`;
       fila.cells[3].innerHTML = `<td><input style="width: 60px" name='costo' type="number" value='${fila.cells[3].innerText}'></td>`;
       fila.cells[4].innerHTML = `<td><input style="width: 60px" name='cantidad' type="number" value='${fila.cells[4].innerText}'></td>`;
-      // fila.innerHTML += "</form>"
 
       iEditar.classList.remove('fa-pencil');
       iEditar.classList.add('fa-save');
