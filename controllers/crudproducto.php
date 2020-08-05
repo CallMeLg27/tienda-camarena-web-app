@@ -56,7 +56,8 @@ class CRUDProducto extends Controller{
     function actualizarProducto($param = null){
         session_start();
         $producto_por_actualizar = new Producto;
-        $producto_por_actualizar->producto_id = $_SESSION["id_verProducto"];
+        // $producto_por_actualizar->producto_id = $_SESSION["id_verProducto"];
+        $producto_por_actualizar->producto_id = $_POST['producto_id'];
         $producto_por_actualizar->nombre = $_POST['nombre'];
         $producto_por_actualizar->descripcion = $_POST['descripcion'];
         $producto_por_actualizar->cantidad = $_POST['cantidad'];
@@ -78,7 +79,7 @@ class CRUDProducto extends Controller{
         }else{
             $this->view->mensaje = "No se pudo actualizar al producto";
         }
-        $this->view->render('consulta/detalle');
+        $this->render();
     }
 
     function eliminarProducto($param = null){

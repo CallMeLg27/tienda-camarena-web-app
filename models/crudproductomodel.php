@@ -75,8 +75,8 @@ class CrudProductoModel extends Model{
                 'producto_id' => $item['producto_id'],
                 'nombre' => $item['nombre'],
                 'descripcion' => $item['descripcion'],
-                'cantidad'  => $row['cantidad'],
-                'costo'  => $row['costo']
+                'cantidad'  => $item['cantidad'],
+                'costo'  => $item['costo']
             ]);
             return true;
         }catch(PDOException $e){
