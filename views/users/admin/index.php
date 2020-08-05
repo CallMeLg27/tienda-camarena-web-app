@@ -10,10 +10,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
-        <!-- Los iconos tipo Solid de Fontawesome-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-        <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-        
         <!-- Nuestros css-->
         <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css/main.css">
         <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css/index.css">
