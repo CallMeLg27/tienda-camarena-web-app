@@ -8,8 +8,10 @@ class Index extends Controller{
 
     function render(){
         session_start();
-        $usuarioLogeado = true;
-        $tipoUsuario = "cliente";
+        if(isset($_SESSION["cliente_actual"])){
+            $usuarioLogeado = true;
+            $tipoUsuario = "cliente";
+        }
         if($usuarioLogeado){
             $this->view->render('users/'.$tipoUsuario.'/index');    
         }

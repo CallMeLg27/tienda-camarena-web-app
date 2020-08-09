@@ -15,12 +15,17 @@
         <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
         <!-- Nuestros css-->
-        <link rel="stylesheet" type="text/css" href="public/css/index.css" th:href="@{/css/index.css}">
-        <link rel="stylesheet" type="text/css" href="public/css/user_admin.css" th:href="@{/css/user_admin.css}">
-        <link rel="stylesheet" type="text/css" href="public/css/main.css" th:href="@{/css/main.css}">
+        <!-- <link rel="stylesheet" type="text/css" href="public/css/index.css" th:href="@{/css/index.css}"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="public/css/user_admin.css" th:href="@{/css/user_admin.css}"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="public/css/main.css" th:href="@{/css/main.css}"> -->
+        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/index.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/user_admin.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/main.css">
+
     </head>
 <body>
     <?php require 'views/header.php'; ?>
+    <?php echo $this->mensaje ?>
     <div class="contespace">
         <div class="d-flex justify-content-center">
             <h2 style="color:##09ea1a"><strong>Iniciar sesión</strong></h2>
@@ -30,19 +35,20 @@
         <div class="col-sm-8 main-section">
             <div class="modal-content">
                 <div class="col-12 user-img">
-                    <img src="public/img/user.png" th:src="@{public/img/user.png}"/>
+                    <img src="<?php echo constant('URL'); ?>public/img/user.png"/>
                 </div>
-                <form class="col-12" th:action="@{/login}" method="get">
+                <form class="col-12" action="<?php echo constant('URL'); ?>login/autenticar" method="POST">
+                <!-- <form class="col-12" th:action="@{/login/autenticar/nada}" method="POST"> -->
                     <div class="form-group" id="user-group">
-                        <input type="text" class="form-control" placeholder="Usuario" name="username"/>
+                        <input required type="text" class="form-control" placeholder="Usuario" name="username"/>
                     </div>
                     <div class="form-group" id="contrasena-group">
-                        <input type="password" class="form-control" placeholder="Contrasena" name="password"/>
+                        <input required type="password" class="form-control" placeholder="Contrasena" name="password"/>
                     </div>
                     <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
                 </form>
                 <div class="col-12 forgot">
-                    <a href="#">¿Recordar contrasena? </a> 
+                    <a href="#">¿Recordar contraseña? </a> 
                 </div>
                 </br>
                 <!--<div th:if="${param.error}" class="alert alert-danger" role="alert">
