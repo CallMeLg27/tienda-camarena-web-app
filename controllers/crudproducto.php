@@ -4,6 +4,7 @@ class CRUDProducto extends Controller{
 
     function __construct(){
         parent::__construct();
+        echo $this->model;
         $this->view->mensaje="";
     }
 
