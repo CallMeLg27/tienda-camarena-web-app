@@ -16,6 +16,7 @@
         <!-- Nuestros css-->
         <link rel="stylesheet" type="text/css" href="public/css/index.css" th:href="@{/css/index.css}">
         <link rel="stylesheet" type="text/css" href="public/css/user_admin.css" th:href="@{/css/user_admin.css}">
+        <link rel="stylesheet" type="text/css" href="public/css/main.css" th:href="@{/css/main.css}">
     </head>
 	<body>
 	<?php require_once 'views/header.php'; ?>

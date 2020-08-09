@@ -15,9 +15,9 @@
         <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
         <!-- Nuestros css-->
-        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css/main.css">
-        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css/index.css">
-        <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css//user_admin.css">
+        <link rel="stylesheet" type="text/css" href="public/css/index.css" th:href="@{/css/index.css}">
+        <link rel="stylesheet" type="text/css" href="public/css/user_admin.css" th:href="@{/css/user_admin.css}">
+        <link rel="stylesheet" type="text/css" href="public/css/main.css" th:href="@{/css/main.css}">
     </head>
 <body>
     <?php require 'views/header.php'; ?>
