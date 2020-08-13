@@ -44,7 +44,7 @@ class CrudClienteModel extends Model{
                 $item->edad  = $row['edad'];
                 $item->email  = $row['email'];
                 $item->distrito  = $row['distrito'];
-                var_dump($item);
+                // var_dump($item);
                 array_push($items, $item);
             }
             return $items;

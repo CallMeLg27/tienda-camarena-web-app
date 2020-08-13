@@ -18,9 +18,12 @@ class CRUDCliente extends Controller{
         $nuevo_cliente = new Cliente;
         $nuevo_cliente->cliente_id = $_POST['cliente_id'];
         $nuevo_cliente->nombre = $_POST['nombre'];
-        $nuevo_cliente->descripcion = $_POST['descripcion'];
-        $nuevo_cliente->cantidad = $_POST['cantidad'];
-        $nuevo_cliente->costo = $_POST['costo'];
+        $nuevo_cliente->apellido = $_POST['apellido'];
+        $nuevo_cliente->dni = $_POST['dni'];
+        $nuevo_cliente->edad = $_POST['edad'];
+        $nuevo_cliente->distrito = $_POST['direccion'];
+        $nuevo_cliente->telefono = $_POST['telefono'];
+        $nuevo_cliente->email = $_POST['email'];
 
         // Se valida el cliente antes de intentar agregarlo a la BD
         if (!$this->validarCliente($nuevo_cliente)){
@@ -30,7 +33,7 @@ class CRUDCliente extends Controller{
         }
 
         // Se intenta añadir el cliente a la BD
-        if($this->model->insert(['cliente_id' => $nuevo_cliente->cliente_id, 'nombre' => $nuevo_cliente->nombre, 'descripcion' => $nuevo_cliente->descripcion, 'cantidad' => $nuevo_cliente->cantidad, 'costo' => $nuevo_cliente->costo])){
+        if($this->model->insert(['cliente_id' => $nuevo_cliente->cliente_id, 'nombre' => $nuevo_cliente->nombre, 'apellido' => $nuevo_cliente->apellido, 'dni' => $nuevo_cliente->dni, 'edad' => $nuevo_cliente->edad, 'distrito' => $nuevo_cliente->distrito, 'telefono' => $nuevo_cliente->telefono, 'email' => $nuevo_cliente->email])){
             //header('location: '.constant('URL').'nuevo/clienteCreado');
             $this->view->mensaje = "Cliente creado correctamente";
             
@@ -59,9 +62,9 @@ class CRUDCliente extends Controller{
         // $cliente_por_actualizar->cliente_id = $_SESSION["id_verCliente"];
         $cliente_por_actualizar->cliente_id = $_POST['cliente_id'];
         $cliente_por_actualizar->nombre = $_POST['nombre'];
-        $cliente_por_actualizar->descripcion = $_POST['descripcion'];
+        $cliente_por_actualizar->dni = $_POST['dni'];
         $cliente_por_actualizar->cantidad = $_POST['cantidad'];
-        $cliente_por_actualizar->costo = $_POST['costo'];
+        $cliente_por_actualizar->edad = $_POST['edad'];
 
         unset($_SESSION['id_verCliente']);
 
@@ -72,7 +75,7 @@ class CRUDCliente extends Controller{
             return;
         }
 
-        if($this->model->update(['cliente_id' => $cliente_por_actualizar->cliente_id, 'nombre' => $cliente_por_actualizar->nombre, 'descripcion' => $cliente_por_actualizar->descripcion, 'cantidad' => $cliente_por_actualizar->cantidad, 'costo' => $cliente_por_actualizar->costo])){
+        if($this->model->update(['cliente_id' => $cliente_por_actualizar->cliente_id, 'nombre' => $cliente_por_actualizar->nombre, 'dni' => $cliente_por_actualizar->dni, 'cantidad' => $cliente_por_actualizar->cantidad, 'edad' => $cliente_por_actualizar->edad])){
 
             $this->view->cliente = $cliente_por_actualizar;
             $this->view->mensaje = "Cliente actualizado correctamente";

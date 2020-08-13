@@ -3,16 +3,16 @@ const botonesEditar = document.querySelectorAll(".bEditar");
 
 items.forEach(item => {
   item.addEventListener("click", function() {
-    let producto_id = this.dataset.producto_id;
-    // alert(this.dataset.producto_id);
+    let pedido_id = this.dataset.pedido_id;
+    // alert(this.dataset.pedido_id);
     let confirm = window.confirm("Deseas eliminar el elemento?");
 
     if (confirm) {
-      httpRequest("http://localhost/miProyecto/crudproducto/eliminarProducto/" + producto_id, function(e) {
-        // httpRequest("https://tienda-camarena.herokuapp.com/crudproducto/eliminarProducto/" + producto_id, function(e) {
+      httpRequest("localhost/miProyecto/crudpedido/eliminarPedido/" + pedido_id, function(e) {
+        // httpRequest("https://tienda-camarena.herokuapp.com/crudpedido/eliminarPedido/" + pedido_id, function(e) {
         console.log(this.responseText);
-        const tbody = document.querySelector("#tbody-productos");
-        const fila = document.querySelector("#fila-" + producto_id);
+        const tbody = document.querySelector("#tbody-pedidos");
+        const fila = document.querySelector("#fila-" + pedido_id);
         tbody.removeChild(fila);
       })
     }
@@ -22,17 +22,17 @@ items.forEach(item => {
 botonesEditar.forEach(item => {
   item.estado = 1;
   item.addEventListener("click", function() {
-    let producto_id = this.dataset.producto_id;
-    console.log(this.dataset.producto_id);
-    let tbody = document.querySelector("#tbody-productos");
+    let pedido_id = this.dataset.pedido_id;
+    console.log(this.dataset.pedido_id);
+    let tbody = document.querySelector("#tbody-pedidos");
     console.log(tbody);
-    let fila = document.querySelector("#fila-" + producto_id);
+    let fila = document.querySelector("#fila-" + pedido_id);
     console.log(fila);
-    let iEditar = document.querySelector(`#fila-${producto_id} .iEditar`);
+    let iEditar = document.querySelector(`#fila-${pedido_id} .iEditar`);
     // const confirm = window.confirm("Deseas eliminar el elemento?");
     if (item.estado == 1) {
 
-      fila.cells[0].innerHTML = `<td><input style="width: 60px" name='producto_id' value='${fila.cells[0].innerText}'></td>`;
+      fila.cells[0].innerHTML = `<td><input style="width: 60px" name='pedido_id' value='${fila.cells[0].innerText}'></td>`;
       fila.cells[1].innerHTML = `<td><input style="width: 200px" name='nombre' value='${fila.cells[1].innerText}'></td>`;
       fila.cells[2].innerHTML = `<td><input style="width: 200px" name='descripcion' value='${fila.cells[2].innerText}'></td>`;
       fila.cells[3].innerHTML = `<td><input style="width: 60px" name='costo' type="number" value='${fila.cells[3].innerText}'></td>`;
@@ -44,13 +44,12 @@ botonesEditar.forEach(item => {
     } else {
       let f = document.createElement("form");
       f.setAttribute('method', "post");
-      f.setAttribute('action', "http://localhost/miProyecto/crudproducto/actualizarProducto/" + producto_id);
-      // f.setAttribute('action', "https://tienda-camarena.herokuapp.com/crudproducto/actualizarProducto/" + producto_id);
+      f.setAttribute('action', "https://tienda-camarena.herokuapp.com/crudpedido/actualizarPedido/" + pedido_id);
 
-      let iproducto_id = document.createElement("input"); //input element, text
-      iproducto_id.setAttribute('type', "text");
-      iproducto_id.setAttribute('name', "producto_id");
-      iproducto_id.setAttribute('value', fila.cells[0].firstChild.value);
+      let ipedido_id = document.createElement("input"); //input element, text
+      ipedido_id.setAttribute('type', "text");
+      ipedido_id.setAttribute('name', "pedido_id");
+      ipedido_id.setAttribute('value', fila.cells[0].firstChild.value);
 
       let inombre = document.createElement("input"); //input element, text
       inombre.setAttribute('type', "text");
@@ -76,7 +75,7 @@ botonesEditar.forEach(item => {
       s.setAttribute('type', "submit");
       s.setAttribute('value', "Submit");
 
-      f.appendChild(iproducto_id);
+      f.appendChild(ipedido_id);
       f.appendChild(inombre);
       f.appendChild(idescripcion);
       f.appendChild(icantidad);
