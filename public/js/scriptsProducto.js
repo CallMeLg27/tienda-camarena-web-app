@@ -32,7 +32,7 @@ botonesEditar.forEach(item => {
     // const confirm = window.confirm("Deseas eliminar el elemento?");
     if (item.estado == 1) {
 
-      fila.cells[0].innerHTML = `<td><input style="width: 60px" name='producto_id' value='${fila.cells[0].innerText}'></td>`;
+      fila.cells[0].innerHTML = `<td><input disabled style="width: 60px" name='producto_id' value='${fila.cells[0].innerText}'></td>`;
       fila.cells[1].innerHTML = `<td><input style="width: 200px" name='nombre' value='${fila.cells[1].innerText}'></td>`;
       fila.cells[2].innerHTML = `<td><input style="width: 200px" name='descripcion' value='${fila.cells[2].innerText}'></td>`;
       fila.cells[3].innerHTML = `<td><input style="width: 60px" name='costo' type="number" value='${fila.cells[3].innerText}'></td>`;

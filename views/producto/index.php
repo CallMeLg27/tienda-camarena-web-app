@@ -21,18 +21,18 @@
     </head>
     <body>
         <?php require_once 'views/header.php'; ?>
- <div class="container d-flex flex-row-reverse" style="padding-top:100px">
-    <section class="row">    
-        <div class="form-row " > 
-            <div class="col-md-8">
-                 <input type="text" class="form-control" placeholder="Buscar...">
-            </div>
-            <div class="col-md-4">
-                <button type="button" class="btn btn-primary btn-block">BUSCAR</button>
-            </div>
-         </div>
-    </section>
-  </div>               
+         <div class="container d-flex flex-row-reverse" style="padding-top:100px">
+            <section class="row">    
+                <div class="form-row " > 
+                    <div class="col-md-8">
+                         <input type="text" class="form-control" placeholder="Buscar...">
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-primary btn-block">BUSCAR</button>
+                    </div>
+                 </div>
+            </section>
+          </div>               
         <div class="d-flex justify-content-center">
             <p><?php echo $this->mensaje; ?></p>
         </div>
@@ -143,7 +143,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/27d40e429f.js" crossorigin="anonymous"></script>
-    <script src="<?php echo constant('URL'); ?>/public/js/main.js"></script>
+    <script src="<?php echo constant('URL'); ?>/public/js/scriptsProducto.js"></script>
 </body>
 
 </html>

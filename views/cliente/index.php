@@ -17,15 +17,6 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#0bad65">
-        <a class="navbar-brand" href="">
-            <h1>
-                <i class="fas fa-shopping-cart"></i>
-                CAMARENA
-            </h1>
-        </a>
-    </nav>
                
         <div class="d-flex justify-content-center" style="padding-top:100px">
             <h2 style="color:##09ea1a"><strong>Registra tus datos</strong></h2>
@@ -67,7 +58,7 @@
                             <p><strong>DNI:</strong></p>
                         </div>
                         <div class="col-md-8">
-                            <input required type="text" name="dni" class="form-control" placeholder="Ingrese su DNI...">
+                            <input required type="number" name="dni" class="form-control" placeholder="Ingrese su DNI...">
                         </div>
                     </div>
                     <div class="form-row py-2">
@@ -75,7 +66,7 @@
                             <p><strong>EDAD:</strong></p>
                         </div>
                         <div class="col-md-8">
-                            <input required type="text" name="edad" class="form-control" placeholder="Ingrese su edad...">
+                            <input required type="number" name="edad" class="form-control" placeholder="Ingrese su edad...">
                         </div>
                     </div>
                     <div class="form-row py-2">
@@ -102,7 +93,7 @@
                             <p><strong>TELEFONO:</strong></p>
                         </div>
                         <div class="col-md-8">
-                            <input required type="text" name="telefono" class="form-control" placeholder="Ingrese telefono...">
+                            <input required type="number" name="telefono" class="form-control" placeholder="Ingrese telefono...">
                         </div>
                     </div>
                     <div class="form-row py-2">
@@ -197,6 +188,6 @@
             </div>
         </div>
     </center> 
-    <script src="<?php echo constant('URL'); ?>/public/js/botonesCliente.js"></script>   
+    <script src="<?php echo constant('URL'); ?>/public/js/scriptsCliente.js"></script>   
 </body>
 </html>

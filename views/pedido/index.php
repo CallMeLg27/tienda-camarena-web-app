@@ -260,6 +260,7 @@
         </div>
       </div>
     </div>
+    <script src="<?php echo constant('URL'); ?>/public/js/scriptsPedido.js"></script>   
 </body>
 
 </html>

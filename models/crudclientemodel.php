@@ -20,7 +20,8 @@ class CrudClienteModel extends Model{
                 'telefono' => $datos['telefono'],
                 'edad' => $datos['edad'],
                 'email' => $datos['email'],
-                'distrito' => $datos['distrito']
+                'distrito' => $datos['distrito'],
+                // 'direccion' => $datos['direccion'],
             ]);
             return true;
         }catch(PDOException $e){
@@ -86,9 +87,10 @@ class CrudClienteModel extends Model{
                 'apellido' => $item['apellido'],
                 'dni'  => $item['dni'],
                 'telefono'  => $item['telefono'],
-                'edad' => $datos['edad'],
-                'email' => $datos['email'],
-                'distrito' => $datos['distrito']
+                'edad' => $item['edad'],
+                'email' => $item['email'],
+                'distrito' => $item['distrito'],
+                // 'direccion' => $item['direccion']
             ]);
             return true;
         }catch(PDOException $e){

@@ -21,7 +21,8 @@ class CRUDCliente extends Controller{
         $nuevo_cliente->apellido = $_POST['apellido'];
         $nuevo_cliente->dni = $_POST['dni'];
         $nuevo_cliente->edad = $_POST['edad'];
-        $nuevo_cliente->distrito = $_POST['direccion'];
+        $nuevo_cliente->distrito = $_POST['distrito'];
+        $nuevo_cliente->direccion = $_POST['direccion'];
         $nuevo_cliente->telefono = $_POST['telefono'];
         $nuevo_cliente->email = $_POST['email'];
 
@@ -62,9 +63,13 @@ class CRUDCliente extends Controller{
         // $cliente_por_actualizar->cliente_id = $_SESSION["id_verCliente"];
         $cliente_por_actualizar->cliente_id = $_POST['cliente_id'];
         $cliente_por_actualizar->nombre = $_POST['nombre'];
+        $cliente_por_actualizar->apellido = $_POST['apellido'];
         $cliente_por_actualizar->dni = $_POST['dni'];
-        $cliente_por_actualizar->cantidad = $_POST['cantidad'];
         $cliente_por_actualizar->edad = $_POST['edad'];
+        $cliente_por_actualizar->distrito = $_POST['distrito'];
+        $cliente_por_actualizar->direccion = $_POST['direccion'];
+        $cliente_por_actualizar->telefono = $_POST['telefono'];
+        $cliente_por_actualizar->email = $_POST['email'];
 
         unset($_SESSION['id_verCliente']);
 
@@ -75,7 +80,7 @@ class CRUDCliente extends Controller{
             return;
         }
 
-        if($this->model->update(['cliente_id' => $cliente_por_actualizar->cliente_id, 'nombre' => $cliente_por_actualizar->nombre, 'dni' => $cliente_por_actualizar->dni, 'cantidad' => $cliente_por_actualizar->cantidad, 'edad' => $cliente_por_actualizar->edad])){
+        if($this->model->update(['cliente_id' => $cliente_por_actualizar->cliente_id, 'nombre' => $cliente_por_actualizar->nombre, 'apellido' => $cliente_por_actualizar->apellido,'dni' => $cliente_por_actualizar->dni, 'edad' => $cliente_por_actualizar->edad, 'distrito' => $cliente_por_actualizar->distrito, 'direccion' => $cliente_por_actualizar->direccion, 'telefono' => $cliente_por_actualizar->telefono, 'email' => $cliente_por_actualizar->email])){
 
             $this->view->cliente = $cliente_por_actualizar;
             $this->view->mensaje = "Cliente actualizado correctamente";
