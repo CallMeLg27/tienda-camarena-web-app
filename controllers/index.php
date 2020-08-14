@@ -8,6 +8,7 @@ class Index extends Controller{
 
     function render(){
         session_start();
+        $usuarioLogeado = false;
         if(isset($_SESSION["cliente_actual"])){
             $usuarioLogeado = true;
             $tipoUsuario = "cliente";

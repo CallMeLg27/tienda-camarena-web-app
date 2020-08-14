@@ -14,11 +14,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/27d40e429f.js" crossorigin="anonymous"></script>
-
-    <!-- Nuestros css-->
-    <link rel="stylesheet" type="text/css" href="public/css/index.css" th:href="@{/css/index.css}">
-    <link rel="stylesheet" type="text/css" href="public/css/user_admin.css" th:href="@{/css/user_admin.css}">
-    <link rel="stylesheet" type="text/css" href="public/css/main.css" th:href="@{/css/main.css}">
 </head>
 
 <body>
@@ -40,8 +35,9 @@
         <div class="container">
             <div class="col-md-12" style="margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom:auto">
                 <div class="d-flex">
-                    <h3 style="color:##09ea1a"><i class="fas fa-user-circle"></i><strong>MARIA VILLANUEVA</strong></h3>
+                    <h3 style="color:##09ea1a"><i class="fas fa-user-circle pr-2"></i><strong>MARIA VILLANUEVA</strong></h3>
                 </div>
+                <br>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-row ">
@@ -80,10 +76,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><hr>
         </div>
         </form>
-        <hr>
+        
         <form>
             <div class="col-md-6" style="margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom:auto">
                 <div class="form-row py-2">
@@ -154,7 +150,7 @@
                             <td>3.2</td>
                             <td>
                                 <div role="group" class="mb-2 btn-group-md btn-group">
-                                    <button class="btn-shadow btn-hover-shine btn btn-success btn-md btn-pill pl-3" title="Editar" ">
+                                    <button class="btn-shadow btn-hover-shine btn btn-success btn-md btn-pill pl-3" title="Editar" >
                                         <i class="fa fa-pencil" aria-hidden="true"></i>
                                     </button>
                                     <button class="btn-shadow btn-hover-shine btn btn-danger btn-md btn-pill pr-3" title="Eliminar">
@@ -188,7 +184,83 @@
             </div>
         </div>
     </div>
-    <?php require_once 'views/footer.php'; ?>
+    <div class="d-flex flex-row justify-content-center mt-2">
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus-circle"></i> PAGAR</button>
+         </div>
+    </div>
+    <br>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-user-circle pr-2"></i><strong>MARIA VILLANUEVA</strong></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-row ">
+                                        <div class="col-md-6">
+                                            <p><strong>NRO CUENTA:</strong></p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>************1</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-row ">
+                                        <div class="col-md-6">
+                                            <p><strong>SALDO DISPONIBLE:</strong></p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>s/. 250</p>
+                                        </div>
+                                    </div>
+                                
+                                <hr>
+                                    <div class="form-row ">
+                                        <div class="col-md-6">
+                                            <p><strong>NRO VENTA:</strong></p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>0001</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-row ">
+                                        <div class="col-md-6">
+                                            <p><strong>FECHA</strong></p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>17/02/2014</p>
+                                        </div>
+                                    </div>
+                                <hr>
+                                    <div class="form-row ">
+                                        <div class="col-md-6">
+                                            <p><strong>TOTAL A PAGAR:</strong></p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>S/. 13.0</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-row ">
+                                        <div class="col-md-6">
+                                            <p><strong>SALDO</strong></p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>237</p>
+                                        </div>
+                                    </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
+            <button type="button" class="btn btn-primary">ACEPTAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="<?php echo constant('URL'); ?>/public/js/scriptsPedido.js"></script>   
 </body>
 
 </html>

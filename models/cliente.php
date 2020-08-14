@@ -9,6 +9,7 @@ class Cliente{
     public $edad;
     public $email;
     public $distrito;
+    public $direccion;
 }
 
 ?>

@@ -21,8 +21,8 @@
 	<body>
 	<?php require_once 'views/header.php'; ?>
 	<main>
-    <div id="main">
-        <h1 class="center">No estas logueado, logueate!</h1>
+    <div id="main" style="margin-top: 100px; height: 200px;" class="d-flex align-items-center">
+        <h1 class="center">NO ESTAS LOGUEADO!</h1>
     </div>
   </main>
 
