@@ -46,8 +46,6 @@ class CRUDPedido extends Controller{
         $idPedido = $param[0];
         $pedido = $this->model->getById($idPedido);
 
-        session_start();
-        $_SESSION["id_verPedido"] = $pedido->pedido_id;
 
         $this->view->pedido = $pedido;
         $this->view->render('consulta/detalle');

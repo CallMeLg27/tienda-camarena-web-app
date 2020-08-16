@@ -11,21 +11,30 @@ class Login extends Controller{
         $contra = $_POST["password"];
         echo '<p>'.$_POST["username"].'</p>';
         echo '<p>'.$_POST["password"].'</p>';
-        $cliente = $this->model->getByCredentials($usuario, $contra);
-        if ($cliente){
-            session_start();
-            $_SESSION["cliente_actual"] = $cliente;
-            $this->view->cliente = $cliente;
-            $this->view->mensaje="Acceso correcto";
-        }else{
+        $usuarioActivo = $this->model->getByCredentials($usuario, $contra);
+        if($usuarioActivo==null){
             $this->view->mensaje="Acceso incorrecto";
+            $this->render();
+            return;
+        }
+
+        if (get_class($usuarioActivo)=="Cliente"){
+            echo "Cliente";
+            session_start();
+            $_SESSION["usuario_actual"] = serialize($usuarioActivo);
+            $this->view->usuarioActivo = $usuarioActivo;
+            $this->view->mensaje="Acceso correcto";
+        }
+
+        if (get_class($usuarioActivo)=="Empleado"){
+            session_start();
+            echo $usuarioActivo->rol;
+            $_SESSION["usuario_actual"] = serialize($usuarioActivo);
+            $this->view->usuarioActivo = $usuarioActivo;
+            $this->view->mensaje="Acceso correcto";
+            // var_dump(unserialize($_SESSION["usuario_actual"]));
         }
         $this->render();
-     	// autentica al cliente
-    	//   Se valida el Login
-    	//   Se busca en la base de datos si el usuario existe
-    	//		Si existe: Crea una sesion
-    	// 		Si no exite: Retorna
     }
 
     // verifica que los campos de usuario y contraseña sean válidos

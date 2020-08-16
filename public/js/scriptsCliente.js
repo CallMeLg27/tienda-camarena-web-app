@@ -41,6 +41,8 @@ botonesEditar.forEach(item => {
       fila.cells[6].innerHTML = `<td><input style="width: 120px" name='direccion' type="text" value='${fila.cells[6].innerText}'></td>`;
       fila.cells[7].innerHTML = `<td><input style="width: 90px" name='telefono' type="number" value='${fila.cells[7].innerText}'></td>`;
       fila.cells[8].innerHTML = `<td><input style="width: 200px" name='email' type="text" value='${fila.cells[8].innerText}'></td>`;
+      fila.cells[9].innerHTML = `<td><input style="width: 20px" name='estado' checked="true" type="checkbox" value='activo'></td>`;
+
 
       iEditar.classList.remove('fa-pencil');
       iEditar.classList.add('fa-save');
@@ -96,6 +98,14 @@ botonesEditar.forEach(item => {
       iemail.setAttribute('name', "email");
       iemail.setAttribute('value', fila.cells[8].firstChild.value);
 
+      let iestado = document.createElement("input"); //input element, text
+      iestado.setAttribute('type', "checkbox");
+      iestado.setAttribute('name', "estado");
+      iestado.setAttribute('value', "activo");
+      if (fila.cells[9].firstChild.checked) {
+        iestado.click();
+      }
+
       let s = document.createElement("input"); //input element, Submit button
       s.setAttribute('type', "submit");
       s.setAttribute('value', "Submit");
@@ -109,6 +119,7 @@ botonesEditar.forEach(item => {
       f.appendChild(idireccion);
       f.appendChild(itelefono);
       f.appendChild(iemail);
+      f.appendChild(iestado);
       f.appendChild(s);
       fila.appendChild(f);
 
@@ -124,6 +135,7 @@ botonesEditar.forEach(item => {
       fila.cells[6].innerHTML = `<td>${fila.cells[6].firstChild.value}</td>`;
       fila.cells[7].innerHTML = `<td>${fila.cells[7].firstChild.value}</td>`;
       fila.cells[8].innerHTML = `<td>${fila.cells[8].firstChild.value}</td>`;
+      fila.cells[9].innerHTML = `<td>${fila.cells[9].firstChild.value}</td>`;
 
       item.estado = 1;
       s.click();

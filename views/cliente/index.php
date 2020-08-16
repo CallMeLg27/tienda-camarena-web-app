@@ -17,7 +17,10 @@
 </head>
 
 <body>
-               
+        <?php require_once 'views/header.php'; ?>
+        <div class="d-flex justify-content-center">
+            <p><?php echo $this->mensaje; ?></p>
+        </div> 
         <div class="d-flex justify-content-center" style="padding-top:100px">
             <h2 style="color:##09ea1a"><strong>Registra tus datos</strong></h2>
         </div>
@@ -163,10 +166,14 @@
                                     <td><?php echo $cliente->dni; ?></td>
                                     <td><?php echo $cliente->edad; ?></td>
                                     <td><?php echo $cliente->distrito; ?></td>
-                                    <td>(direccion)</td>
+                                    <td><?php echo $cliente->direccion; ?></td>
                                     <td><?php echo $cliente->telefono; ?></td>
                                     <td><?php echo $cliente->email; ?></td>
-                                    <td><i class="far fa-check-square fa-2x pl-3"></i></td>
+                                    <?php if($cliente->estado=='activo'){ ?>
+                                        <td><i class="far fa-check-square fa-2x pl-3"></i></td>
+                                    <?php }else{ ?>
+                                        <td><i class="far fa-times-circle fa-2x pl-3"></i></td>
+                                    <?php } ?>
                                     <td>
                                         <div role="group" class="mb-2 btn-group-md btn-group">
                                             <button data-cliente_id="<?php echo $cliente->cliente_id; ?>" class="bEditar btn-shadow btn-hover-shine btn btn-success btn-md btn-pill pl-3" title="Editar">

@@ -13,8 +13,8 @@
 
 
 -- Volcando estructura de base de datos para heroku_ba968b3eda52761
-CREATE DATABASE IF NOT EXISTS `tiendacamarena` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `tiendacamarena`;
+CREATE DATABASE IF NOT EXISTS `heroku_ba968b3eda52761` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `heroku_ba968b3eda52761`;
 
 -- Volcando estructura para tabla heroku_ba968b3eda52761.cliente
 CREATE TABLE IF NOT EXISTS `cliente` (
@@ -26,25 +26,26 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `edad` tinyint(4) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `distrito` varchar(50) DEFAULT NULL,
+  `direccion` varchar(100) DEFAULT NULL,
+  `estado` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`cliente_id`),
   UNIQUE KEY `uk_cliente_dni` (`dni`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla heroku_ba968b3eda52761.cliente: ~12 rows (aproximadamente)
+-- Volcando datos para la tabla heroku_ba968b3eda52761.cliente: ~11 rows (aproximadamente)
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` (`cliente_id`, `nombre`, `apellido`, `dni`, `telefono`, `edad`, `email`, `distrito`) VALUES
-	('CL001', 'Marco', 'Huari', '75897931', '972082374', 18, 'marquitos1213@hotmail.com', 'Santa Anita'),
-	('CL002', 'Andrea', 'Mendoza', '75897932', '915764235', 20, 'marquitos1213@hotmail.com', 'Ate'),
-	('CL003', 'Nikol', 'Lopez', '75897933', '987456321', 23, 'marquitos1213@hotmail.com', 'Los Olivos'),
-	('CL004', 'Ronny', 'Mallma', '75897934', '972082374', 32, 'marquitos1213@hotmail.com', 'Puente Piedra'),
-	('CL005', 'Oscar', 'Huayllas', '75897935', '972082374', 56, 'marquitos1213@hotmail.com', 'Santa Anita'),
-	('CL006', 'Rodolfo', 'Vega', '75897936', '972082374', 70, 'marquitos1213@hotmail.com', 'La Molina'),
-	('CL007', 'Juan', 'Huari', '75897937', '972082374', 65, 'marquitos1213@hotmail.com', 'Ate'),
-	('CL008', 'Luis', 'Huaman', '75897938', '972082374', 34, 'marquitos1213@hotmail.com', 'Santa Anita'),
-	('CL009', 'Pancracio', 'Romero', '75897939', '972082374', 64, 'marquitos1213@hotmail.com', 'Los Olivos'),
-	('CL010', 'Anastacia', 'Ruiz', '75897911', '972082374', 28, 'marquitos1213@hotmail.com', 'Ate'),
-	('CL011', 'prueba', 'pp', '74716688', '999999999', 21, 'nprueba@homail.com', 'san borja'),
-	('CL012', 'asd', 'ads', '45123698', '953214789', 23, 'ddd', 'dddd');
+INSERT INTO `cliente` (`cliente_id`, `nombre`, `apellido`, `dni`, `telefono`, `edad`, `email`, `distrito`, `direccion`, `estado`) VALUES
+	('CL001', 'Marco', 'Huari', '75897931', '972082374', 18, 'marquitos1213@hotmail.com', 'Santa Anita', 'Calle Los Olmos 123', 'activo'),
+	('CL002', 'Andrea', 'Mendoza', '75897932', '915764235', 20, 'marquitos1213@hotmail.com', 'Ate', 'Calle Los Olmos 123', 'activo'),
+	('CL003', 'Nikol', 'Lopez', '75897933', '987456321', 23, 'marquitos1213@hotmail.com', 'Los Olivos', 'Calle Los Olmos 123', 'activo'),
+	('CL004', 'Ronny', 'Mallma', '75897934', '972082374', 32, 'marquitos1213@hotmail.com', 'Puente Piedra', 'Calle Los Olmos 123', 'activo'),
+	('CL005', 'Oscar', 'Huayllas', '75897935', '972082374', 56, 'marquitos1213@hotmail.com', 'Santa Anita', 'Calle Los Olmos 123', 'activo'),
+	('CL006', 'Rodolfo', 'Vega', '75897936', '972082374', 70, 'marquitos1213@hotmail.com', 'La Molina', 'Calle Los Olmos 123', 'activo'),
+	('CL007', 'Juan', 'Huari', '75897937', '972082374', 65, 'marquitos1213@hotmail.com', 'Ate', 'Calle Los Olmos 123', 'activo'),
+	('CL008', 'Luis', 'Huaman', '75897938', '972082374', 34, 'marquitos1213@hotmail.com', 'Santa Anita', 'Calle Los Olmos 123', 'activo'),
+	('CL009', 'Pancracio', 'Romero', '75897939', '972082374', 64, 'marquitos1213@hotmail.com', 'Los Olivos', 'Calle Los Olmos 123', 'activo'),
+	('CL010', 'Anastacia', 'Ruiz', '75897911', '972082374', 28, 'marquitos1213@hotmail.com', 'Ate', 'Calle Las Tinieblas 1123', 'activo'),
+	('CL011', 'prueba', 'pp', '74716688', '999999999', 21, 'nprueba@homail.com', 'san borja', 'Calle Los Olivos 433', 'inactivo');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 
 -- Volcando estructura para tabla heroku_ba968b3eda52761.comprobantepago
@@ -90,6 +91,24 @@ INSERT INTO `detalle_promocion_producto` (`producto_id`, `promocion_id`) VALUES
 	('PR010', 'PM010');
 /*!40000 ALTER TABLE `detalle_promocion_producto` ENABLE KEYS */;
 
+-- Volcando estructura para tabla heroku_ba968b3eda52761.empleados
+CREATE TABLE IF NOT EXISTS `empleado` (
+  `empleado_id` char(5) NOT NULL,
+  `rol` varchar(50) NOT NULL DEFAULT '',
+  `usuario` varchar(50) NOT NULL DEFAULT '',
+  `contraseña` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`empleado_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla heroku_ba968b3eda52761.empleados: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `empleado` DISABLE KEYS */;
+INSERT INTO `empleado` (`empleado_id`, `rol`, `usuario`, `contraseña`) VALUES
+	('E0001', 'admin','aaaaa','11111'),
+	('E0002', 'almacenero','bbbbb','22222'),
+	('E0003', 'atCliente','ccccc','33333'),
+	('E0004', 'atCliente','ddddd','44444');
+/*!40000 ALTER TABLE `empleado` ENABLE KEYS */;
+
 -- Volcando estructura para tabla heroku_ba968b3eda52761.pedido
 CREATE TABLE IF NOT EXISTS `pedido` (
   `pedido_id` char(5) DEFAULT NULL,
@@ -120,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `costo` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla heroku_ba968b3eda52761.producto: ~11 rows (aproximadamente)
+-- Volcando datos para la tabla heroku_ba968b3eda52761.producto: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
 INSERT INTO `producto` (`producto_id`, `nombre`, `descripcion`, `cantidad`, `costo`) VALUES
 	('PR001', 'LECHE', 'LECHE DE VACA', 50, 2.5),
@@ -132,8 +151,7 @@ INSERT INTO `producto` (`producto_id`, `nombre`, `descripcion`, `cantidad`, `cos
 	('PR007', 'SHAMPOO', 'LIMPIADOR DEL CUERO CABELLUDO', 50, 12.5),
 	('PR008', 'INKA COLA', 'REFRESCANTE', 50, 2.5),
 	('PR009', 'PAPITAS LAYS', 'PAITAS FRITAS SALADAS', 50, 1.5),
-	('PR010', 'GALLETA OREO', 'RELLENAS DE VAINILLA', 50, 1.5),
-	('PR011', 'CEREZAS', 'CAJA DE CEREZAS', 200, 3);
+	('PR010', 'GALLETA OREO', 'RELLENAS DE VAINILLA', 50, 1.5);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla heroku_ba968b3eda52761.productopedido
