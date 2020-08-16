@@ -5,7 +5,7 @@ class Logout extends Controller{
         parent::__construct();
         $this->view->mensaje="";
         session_start();
-        unset($_SESSION["cliente_actual"]);
+        unset($_SESSION["usuario_actual"]);
     }
 
 
