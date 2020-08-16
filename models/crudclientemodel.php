@@ -10,7 +10,7 @@ class CrudClienteModel extends Model{
 
     public function insert($datos){
         // insertar
-        $query = $this->db->connect()->prepare('INSERT INTO CLIENTE (cliente_id, nombre, apellido, dni, telefono, edad, email, distrito) VALUES(:cliente_id, :nombre, :apellido, :dni, :telefono, :edad, :email, :distrito)');
+        $query = $this->db->connect()->prepare('INSERT INTO CLIENTE (cliente_id, nombre, apellido, dni, telefono, edad, email, distrito, direccion, estado) VALUES(:cliente_id, :nombre, :apellido, :dni, :telefono, :edad, :email, :distrito, :direccion, :estado)');
         try{
             $query->execute([
                 'cliente_id' => $datos['cliente_id'],
@@ -21,7 +21,8 @@ class CrudClienteModel extends Model{
                 'edad' => $datos['edad'],
                 'email' => $datos['email'],
                 'distrito' => $datos['distrito'],
-                // 'direccion' => $datos['direccion'],
+                'direccion' => $datos['direccion'],
+                'estado' => $datos['estado'],
             ]);
             return true;
         }catch(PDOException $e){
@@ -45,6 +46,8 @@ class CrudClienteModel extends Model{
                 $item->edad  = $row['edad'];
                 $item->email  = $row['email'];
                 $item->distrito  = $row['distrito'];
+                $item->direccion  = $row['direccion'];
+                $item->estado  = $row['estado'];
                 // var_dump($item);
                 array_push($items, $item);
             }
@@ -71,6 +74,8 @@ class CrudClienteModel extends Model{
                 $item->edad  = $row['edad'];
                 $item->email  = $row['email'];
                 $item->distrito  = $row['distrito'];
+                $item->direccion  = $row['direccion'];
+                $item->estado  = $row['estado'];
             }
             return $item;
         }catch(PDOException $e){
@@ -79,7 +84,8 @@ class CrudClienteModel extends Model{
     }
 
     public function update($item){
-        $query = $this->db->connect()->prepare('UPDATE cliente SET nombre = :nombre, apellido = :apellido, dni = :dni, telefono = :telefono, edad = :edad, email = :email, distrito = :distrito WHERE cliente_id = :cliente_id');
+        // var_dump($item);
+        $query = $this->db->connect()->prepare('UPDATE cliente SET nombre = :nombre, apellido = :apellido, dni = :dni, telefono = :telefono, edad = :edad, email = :email, distrito = :distrito, direccion = :direccion, estado = :estado WHERE cliente_id = :cliente_id');
         try{
             $query->execute([
                 'cliente_id' => $item['cliente_id'],
@@ -90,10 +96,12 @@ class CrudClienteModel extends Model{
                 'edad' => $item['edad'],
                 'email' => $item['email'],
                 'distrito' => $item['distrito'],
-                // 'direccion' => $item['direccion']
+                'direccion' => $item['direccion'],
+                'estado' => $item['estado'],
             ]);
             return true;
         }catch(PDOException $e){
+            echo $e;
             return false;
         }
     }

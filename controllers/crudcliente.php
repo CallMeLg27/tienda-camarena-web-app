@@ -25,6 +25,7 @@ class CRUDCliente extends Controller{
         $nuevo_cliente->direccion = $_POST['direccion'];
         $nuevo_cliente->telefono = $_POST['telefono'];
         $nuevo_cliente->email = $_POST['email'];
+        $nuevo_cliente->estado = $_POST['estado'];
 
         // Se valida el cliente antes de intentar agregarlo a la BD
         if (!$this->validarCliente($nuevo_cliente)){
@@ -34,7 +35,7 @@ class CRUDCliente extends Controller{
         }
 
         // Se intenta añadir el cliente a la BD
-        if($this->model->insert(['cliente_id' => $nuevo_cliente->cliente_id, 'nombre' => $nuevo_cliente->nombre, 'apellido' => $nuevo_cliente->apellido, 'dni' => $nuevo_cliente->dni, 'edad' => $nuevo_cliente->edad, 'distrito' => $nuevo_cliente->distrito, 'telefono' => $nuevo_cliente->telefono, 'email' => $nuevo_cliente->email])){
+        if($this->model->insert(['cliente_id' => $nuevo_cliente->cliente_id, 'nombre' => $nuevo_cliente->nombre, 'apellido' => $nuevo_cliente->apellido, 'dni' => $nuevo_cliente->dni, 'edad' => $nuevo_cliente->edad, 'distrito' => $nuevo_cliente->distrito, 'direccion' => $nuevo_cliente->direccion,'telefono' => $nuevo_cliente->telefono, 'email' => $nuevo_cliente->email, 'estado' => $nuevo_cliente->estado,])){
             //header('location: '.constant('URL').'nuevo/clienteCreado');
             $this->view->mensaje = "Cliente creado correctamente";
             
@@ -70,8 +71,13 @@ class CRUDCliente extends Controller{
         $cliente_por_actualizar->direccion = $_POST['direccion'];
         $cliente_por_actualizar->telefono = $_POST['telefono'];
         $cliente_por_actualizar->email = $_POST['email'];
-
-        unset($_SESSION['id_verCliente']);
+        if(isset($_POST['estado']) && $_POST['estado']=="activo"){
+            $cliente_por_actualizar->estado = "activo";
+        }else{
+            $cliente_por_actualizar->estado = "inactivo"; 
+        }
+        
+        // var_dump($cliente_por_actualizar);
 
         // Se valida el cliente antes de intentar agregarlo a la BD
         if (!$this->validarCliente($cliente_por_actualizar)){
@@ -80,7 +86,7 @@ class CRUDCliente extends Controller{
             return;
         }
 
-        if($this->model->update(['cliente_id' => $cliente_por_actualizar->cliente_id, 'nombre' => $cliente_por_actualizar->nombre, 'apellido' => $cliente_por_actualizar->apellido,'dni' => $cliente_por_actualizar->dni, 'edad' => $cliente_por_actualizar->edad, 'distrito' => $cliente_por_actualizar->distrito, 'direccion' => $cliente_por_actualizar->direccion, 'telefono' => $cliente_por_actualizar->telefono, 'email' => $cliente_por_actualizar->email])){
+        if($this->model->update(['cliente_id' => $cliente_por_actualizar->cliente_id, 'nombre' => $cliente_por_actualizar->nombre, 'apellido' => $cliente_por_actualizar->apellido,'dni' => $cliente_por_actualizar->dni, 'edad' => $cliente_por_actualizar->edad, 'distrito' => $cliente_por_actualizar->distrito, 'direccion' => $cliente_por_actualizar->direccion, 'telefono' => $cliente_por_actualizar->telefono, 'email' => $cliente_por_actualizar->email, 'estado' => $cliente_por_actualizar->estado])){
 
             $this->view->cliente = $cliente_por_actualizar;
             $this->view->mensaje = "Cliente actualizado correctamente";

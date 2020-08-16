@@ -40,7 +40,7 @@ class CrudPromocionModel extends Model{
                 $item->cantidad  = $row['cantidad'];
                 $item->producto_id  = $row['producto_id'];
                 $item->costo  = $row['costo'];
-                var_dump($item);
+                // var_dump($item);
                 array_push($items, $item);
             }
             return $items;

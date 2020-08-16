@@ -10,6 +10,7 @@ class Cliente{
     public $email;
     public $distrito;
     public $direccion;
+    public $estado;
 }
 
 ?>
