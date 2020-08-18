@@ -18,12 +18,13 @@
 
 <body>
 
-    <?php require_once "views/footer.php" ?>
+    <?php require_once "views/header.php" ?>
                
 
         <div class="d-flex justify-content-center" style="padding-top:100px">
             <h2 style="color:##09ea1a"><strong>Registra tu pedido</strong></h2>
         </div>
+        <?php var_dump($this->producto) ?>
         <form>
         <div class="container">
             <div class="col-md-12" style="margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom:auto">
@@ -73,14 +74,14 @@
         </div>
         </form>
         
-        <form>
+        <form action="<?php echo constant('URL'); ?>crudpedido/anadirProducto" method="POST">
             <div class="col-md-6" style="margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom:auto">
                 <div class="form-row py-2">
                     <div class="col-md-4">
                         <p><strong>CÓDIGO:</strong></p>
                     </div>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" placeholder="Ingrese su código...">
+                        <input type="text" name="producto_id" class="form-control" placeholder="Ingrese su código...">
                     </div>
                 </div>
                 <div class="form-row py-2">
@@ -93,7 +94,7 @@
                 </div>
                 <div class="d-flex flex-row justify-content-center mt-4">
                     <div class="col-md-4">
-                        <button type="button" class="btn btn-primary btn-block"><i class="fas fa-plus-circle"></i> AÑADIR</button>
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-plus-circle"></i> AÑADIR</button>
                     </div>
                 </div>
             </div>
@@ -253,7 +254,8 @@
         </div>
       </div>
     </div>
-    <script src="<?php echo constant('URL'); ?>/public/js/scriptsPedido.js"></script>   
+    <?php require_once "views/footer.php" ?>
+    <script src="<?php echo constant('URL'); ?>/public/js/scriptsPedido.js"></script>
 </body>
 
 </html>

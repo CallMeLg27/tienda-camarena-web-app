@@ -1,12 +1,15 @@
 <?php
 
 class Usuario{
-    public $promocion_id;
+    public $usuario_id;
     public $nombre;
-    public $descripcion;
-    public $cantidad;
-    public $producto_id;
-    public $csto;
+    public $dni;
+    public $telefono;
+    public $email;
+    public $sueldo;
+    public $direccion;
+    public $ID;
+    public $password;
 }
 
 ?>

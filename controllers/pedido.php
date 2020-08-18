@@ -9,5 +9,9 @@ class Pedido extends Controller{
     function render(){
         $this->view->render('pedido/index');
     }
+
+    function getProducto(){
+    		$this->view->producto = $this->model->getProductoById('PR001');
+    }
 }
 ?>

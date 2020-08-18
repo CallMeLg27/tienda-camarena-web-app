@@ -13,6 +13,12 @@ class CRUDPedido extends Controller{
         $this->view->render('pedido/index');
     }
 
+    function anadirProducto(){
+        $producto_id = $_POST["producto_id"];
+        $this->view->producto = $this->model->getProductoById($producto_id);
+        $this->render();
+    }
+
     function crear(){
 
         $nuevo_pedido = new Pedido;
