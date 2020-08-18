@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="public/css/user_admin.css" th:href="@{/css/user_admin.css}">
         <link rel="stylesheet" type="text/css" href="public/css/main.css" th:href="@{/css/main.css}">
     </head>
-    <body>    
+    <body>
 
     <?php require 'views/header.php'; ?>
     <div class="col-sm-8 main-section2">
@@ -23,7 +23,7 @@
             <div class="welcome text-center">
                 </br>
                 <h1 style="color:##09ea1a"><strong> Bienvenido </strong><i class="fa fa-home"></i></h1>
-                <h1 style="color:#252546"><strong>Administrador Julio Perez</strong></h1></br>  
+                <h1 style="color:#252546"><strong>Administrador <?php echo $this->nombreUsuario ?></strong></h1></br>  
                 <h3 style="color:##09ea1a"><strong>¿Qué desea hacer hoy?</strong></h3>
             </div>
             </br>     

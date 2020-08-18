@@ -1,12 +1,12 @@
 <?php
 
-class Promocion{
+class Usuario{
     public $promocion_id;
     public $nombre;
     public $descripcion;
     public $cantidad;
     public $producto_id;
-    public $costo;
+    public $csto;
 }
 
 ?>

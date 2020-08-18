@@ -22,48 +22,50 @@
                 <div class="welcome text-center">
                     </br>
                     <h1 style="color:##09ea1a"><strong> Bienvenido </strong><i class="fa fa-home"></i></h1>
-                    <h1 style="color:#252546"><strong>Almacenero Danni Rabanal</strong></h1></br>  
+                    <h1 style="color:#252546"><strong>Almacenero <?php echo $this->nombreUsuario ?></strong></h1></br>  
                     <h3 style="color:##09ea1a"><strong>¿Que desea hacer hoy?</strong></h3>
                 </div>
                 </br>     
                 <div class="asd-spin-nested-loading text-center">
                     <div class="asd-spin-container">
                         <div class="container-fluid no-gutters paddingless-xl">
-                            <div class="row"><div class="resultunit col-md-4 margin-bottom-15">
-                                <article class="minimumunit">
-                                    <a href="">
-                                        <div class="minimumunitBody">
-                                            <div class="minimumunitContainer">
-                                                <img class="minimumunitLogo" src="public/img/stock.png" th:src="@{public/img/stock.png}" height="180" width="180" />
+                            <div class="row">
+                                <div class="resultunit col-md-4 margin-bottom-15">
+                                    <article class="minimumunit">
+                                        <a href="">
+                                            <div class="minimumunitBody">
+                                                <div class="minimumunitContainer">
+                                                    <img class="minimumunitLogo" src="public/img/stock.png" th:src="@{public/img/stock.png}" height="180" width="180" />
+                                                </div>
+                                                <h4 class="minimumunitTitle">Consultar stock</h4> </br>
                                             </div>
-                                            <h4 class="minimumunitTitle">Consultar stock</h4> </br>
-                                        </div>
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="resultunit col-md-4 margin-bottom-15">
-                                <article class="minimumunit">
-                                    <a href="">
-                                        <div class="minimumunitBody">
-                                            <div class="minimumunitContainer">
-                                                <img class="minimumunitLogo" src="public/img/producto.png" th:src="@{public/img/producto.png}" height="180" width="180" />
-                                            </div>
-                                            <h4 class="minimumunitTitle">Productos</h4>  </br>
-                                        </div>                   
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="resultunit col-md-4 margin-bottom-15">
-                                <article class="minimumunit">
-                                    <a href="">
-                                        <div class="minimumunitBody">
-                                            <div class="minimumunitContainer">
-                                                <img class="minimumunitLogo" src="public/img/promociones.png" th:src="@{public/img/promociones.png}" height="180" width="180" />
-                                            </div>
-                                            <h4 class="minimumunitTitle">Promociones</h4>  </br>
-                                        </div>                   
-                                    </a>
-                                </article>
+                                        </a>
+                                    </article>
+                                </div>
+                                <div class="resultunit col-md-4 margin-bottom-15">
+                                    <article class="minimumunit">
+                                        <a href="">
+                                            <div class="minimumunitBody">
+                                                <div class="minimumunitContainer">
+                                                    <img class="minimumunitLogo" src="public/img/producto.png" th:src="@{public/img/producto.png}" height="180" width="180" />
+                                                </div>
+                                                <h4 class="minimumunitTitle">Productos</h4>  </br>
+                                            </div>                   
+                                        </a>
+                                    </article>
+                                </div>
+                                <div class="resultunit col-md-4 margin-bottom-15">
+                                    <article class="minimumunit">
+                                        <a href="">
+                                            <div class="minimumunitBody">
+                                                <div class="minimumunitContainer">
+                                                    <img class="minimumunitLogo" src="public/img/promociones.png" th:src="@{public/img/promociones.png}" height="180" width="180" />
+                                                </div>
+                                                <h4 class="minimumunitTitle">Promociones</h4>  </br>
+                                            </div>                   
+                                        </a>
+                                    </article>
+                                </div>
                             </div>
                         </div>
                     </div>
