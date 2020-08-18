@@ -32,3 +32,23 @@
 1. CRUD CLIENTE (U)
 1. CRUD PEDIDO
 1. Stock de productos
+
+
+
+### RUTAS:
+1. https://tienda-camarena.herokuapp.com
+1. https://tienda-camarena.herokuapp.com/crudproducto
+1. https://tienda-camarena.herokuapp.com/crudcliente
+1. https://tienda-camarena.herokuapp.com/crudpromocion
+1. https://tienda-camarena.herokuapp.com/crudusuario
+1. https://tienda-camarena.herokuapp.com/crudpedido
+1. https://tienda-camarena.herokuapp.com/crudrecarga
+1. https://tienda-camarena.herokuapp.com/login
+1. https://tienda-camarena.herokuapp.com/logout
+
+
+### LOGINS:
+aaaaa 11111
+bbbbb 11111
+......
+eeeee 55555
