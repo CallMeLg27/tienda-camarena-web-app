@@ -17,10 +17,11 @@ class Index extends Controller{
             $tipoUsuario = $usuario_actual->rol;
         }
         if($usuarioLogeado){
-            $this->view->render('users/'.$tipoUsuario.'/index');    
+            $this->view->nombreUsuario = $usuario_actual->usuario;
+            $this->view->render('users/'.$tipoUsuario.'/index');
         }
         else{
-            $this->view->render('index/index');  
+            $this->view->render('index/index'); 
         }
     }
 

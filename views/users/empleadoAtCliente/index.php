@@ -22,7 +22,7 @@
                 <div class="welcome text-center">
                     </br>
                     <h1 style="color:##09ea1a"><strong> Bienvenido </strong><i class="fa fa-home"></i></h1>
-                    <h1 style="color:#252546"><strong>Empleado de At. al cliente Felicita Ramones</strong></h1></br>  
+                    <h1 style="color:#252546"><strong>Empleado de At. al cliente <?php echo $this->nombreUsuario ?></strong></h1></br>  
                     <h3 style="color:##09ea1a"><strong>¿Qué desea hacer hoy?</strong></h3>
                 </div>
                 </br>     
