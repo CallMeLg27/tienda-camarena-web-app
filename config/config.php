@@ -5,7 +5,7 @@ define('URL', 'http://localhost:8080/miProyecto/');
 define('HOST', 'localhost');
 define('DB', 'heroku_ba968b3eda52761');
 define('USER', 'root');
-define('PASSWORD', "Sayi7506");
+define('PASSWORD', "root");
 define('CHARSET', 'utf8mb4');
 
 // --deployed
