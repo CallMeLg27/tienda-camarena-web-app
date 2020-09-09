@@ -8,7 +8,6 @@ class Logout extends Controller{
         unset($_SESSION["usuario_actual"]);
     }
 
-
     function render(){
         $this->view->render('logout/index');
     }

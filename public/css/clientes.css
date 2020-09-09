@@ -1,0 +1,12 @@
+#listClientes{
+   color: #fff;
+   background-color: #586e84;
+}
+
+#listClientes.list-group-item-action:focus, #listClientes.list-group-item-action:hover {
+    color: #fff;
+    background-color: #404f5f;
+}
+#empleado{
+    display: block;
+}

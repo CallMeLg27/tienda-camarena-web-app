@@ -1,46 +1,30 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 body {
-  background-color: #eee;
+   
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#header {
-  background: black;
-  padding: 10px;
+.center{
+    text-align: center;
 }
 
-#header ul li {
-  list-style: none;
-  display: inline;
-  padding: 10px;
+
+h1#header{
+    font-size: 1.85rem;
+} 
+
+@media screen and (max-width: 600px){
+   h1{
+       font-size:1.55rem;
+    }
+    h2{
+       font-size:1.45rem;
+    }
+    h3{
+       font-size:1.35rem;
+    }
+    h4{
+       font-size:1.25rem;
+    }
+   
 }
 
-#header ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
-
-#footer {
-  margin-top: 10px;
-  background-color: #ccc;
-  padding: 20px;
-}
-
-#main {
-  padding: 20px 0;
-  width: 500px;
-  margin: 0 auto;
-}
-
-.center {
-  text-align: center;
-}
-
-.error {
-  color: #ac2323;
-}

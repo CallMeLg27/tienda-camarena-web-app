@@ -1,0 +1,12 @@
+#listUsuarios{
+   color: #fff;
+   background-color: #586e84;
+}
+
+#listUsuarios.list-group-item-action:focus, #listUsuarios.list-group-item-action:hover {
+    color: #fff;
+    background-color: #404f5f;
+}
+#admin{
+    display: block;
+}

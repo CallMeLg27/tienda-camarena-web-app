@@ -1,0 +1,42 @@
+.navbar-custom-menu>.navbar-nav>li {
+    align-items: center;
+    display: flex;
+    margin-left: 2rem;
+}
+
+.navbar-custom-menu{
+    padding: 2px;
+    width:100vw;
+    }
+
+.navbar-brand{
+    padding: 2px;
+}
+
+#textMenu{
+  font-size:0.7rem;
+}
+
+#iconMenu{
+  font-size: 1.45rem;
+}
+
+
+a#menu-toggle{
+  background:transparent;
+  color:#fff ;
+  width: 52px
+}
+
+@media screen and (max-width: 768px){
+ .navbar-custom-menu{
+  padding: 0px;
+  width:auto;
+  }
+  .navbar-brand{
+      padding: 0px;
+  }
+  .navbar-custom-menu>.navbar-nav>li {
+  margin-left: auto;
+  }
+}

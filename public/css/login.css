@@ -1,0 +1,140 @@
+body{
+    background: #4c4c4c;
+    margin:auto;
+    padding:auto;   
+    place-items: center;
+    justify-content: center;       
+}
+
+#close{
+    margin-right: -15px;
+    border-radius: 0px;
+}
+.main-section{
+    margin:0 auto;
+    margin-top:13%;
+    padding: 0;
+}
+
+.modal-content{
+    background-color: #323232;
+    opacity: 0.9;
+    padding: 0 20px;
+    box-shadow: 0px 0px 3px #848484;
+}
+
+.user-img{
+    margin-top: -50px;
+    margin-bottom: 35px;
+}
+
+.user-img img{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 3px #848484;
+    border-radius: 50%;
+}
+
+.form-group input{
+    height: 42px;
+    font-size: 18px;
+    border:0;
+    padding-left: 54px;
+    border-radius: 5px;
+}
+
+.form-group::before{
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    left: 28px;
+    font-size: 22px;
+    padding-top:4px;
+}
+
+.form-group#user-group::before{
+    content: "\f007";
+}
+
+.form-group#contrasena-group::before{
+    content: "\f023";
+}
+
+button{
+    width: 60%;
+    margin: 5px 0 25px;
+}
+
+.forgot{
+    padding-top: 5px;
+    padding-bottom:25px;
+}
+
+.forgot a{
+    color: white;
+   
+}
+
+.content{
+    margin-top: 0px;
+}
+.container{
+    padding:0px;
+    margin: 0px
+}
+
+.centrado{
+
+    background-color: #323232;
+    display: flex;     
+    align-items: center;
+    justify-content: center;
+
+}
+.vs-movil{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .container{
+   height: 100vh;
+    min-width: 100vw;
+    }
+    .col-sm-4,
+    .col-sm-8{
+        min-width: 100%;
+    }
+
+    body{
+        background-color: #ffffff;
+        overflow: auto;
+    }
+    .contenedor{
+        margin: auto;
+    }
+
+    .img1{
+        padding:10px 10px 10px 0px;
+    }
+
+    .img2{
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+
+    .content{
+        margin-top: 0px;
+    }
+    .modal-dialog{
+        margin:auto;
+        margin-bottom: 15px;
+    }
+
+    .vs-escritorio{
+        display: none;
+    }
+
+    .vs-movil{
+        display: flex
+    }
+}

@@ -1,0 +1,12 @@
+#listReportes{
+   color: #fff;
+   background-color: #586e84;
+}
+
+#listReportes.list-group-item-action:focus, #listReportes.list-group-item-action:hover {
+    color: #fff;
+    background-color: #404f5f;
+}
+#admin{
+    display: block;
+}

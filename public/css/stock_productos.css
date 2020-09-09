@@ -1,0 +1,47 @@
+@media print {
+    .btn,
+    #footer,
+    #selection,
+    #sidebar-wrapper 
+    {
+        display: none !important;
+    }
+    body{
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 20px;
+    }
+
+    html,
+    body,
+    #title{
+        margin:0px;
+        padding: 0px;
+    }
+    .container{
+        margin-left: 2px;
+    }
+}
+
+#imprimir{
+    margin-bottom: 20px;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn),
+.btn-primary {
+    width: 130px;
+    height: 40px;
+}
+
+#listStock{
+    color: #fff;
+    background-color: #586e84;
+}
+  
+#listStock.list-group-item-action:focus, #listStock.list-group-item-action:hover {
+    color: #fff;
+    background-color: #404f5f;
+}
+
+#almacenero{
+    display: block;
+}

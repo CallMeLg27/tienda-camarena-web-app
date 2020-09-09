@@ -1,0 +1,59 @@
+.nav>li>a:hover, .nav>li>a:active, .nav>li>a:focus {
+    color:#efecec;
+    background: transparent;
+}
+
+.pull-right{
+    text-align: right;
+}
+
+a:hover, a:active, a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #fff
+}
+
+a{
+    color: #fff;
+}
+
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>p {
+    color: #000;
+}
+
+.navbar-nav>.user-menu .user-image{
+    width: 35px;
+    height: 35px;
+   
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>.user-footer {
+    background-color: #ccc;
+    padding: 10px;
+}
+
+#admin,
+#empleado,
+#almacenero{
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+    #nameuser{
+      display: none;
+    }
+
+    .navbar-nav {
+    flex-direction: row;
+    }
+    .navbar-nav>.user-menu .user-image {
+         margin-top:0px;
+    }
+
+   .navbar-nav>.user-menu .user-image {
+    width: 25px;
+    height: 25px;
+    }
+
+}

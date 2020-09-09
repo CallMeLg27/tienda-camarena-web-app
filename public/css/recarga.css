@@ -1,0 +1,12 @@
+#listRecarga{
+   color: #fff;
+   background-color: #586e84;
+}
+
+#listRecarga.list-group-item-action:focus, #listRecarga.list-group-item-action:hover {
+    color: #fff;
+    background-color: #404f5f;
+}
+#empleado{
+    display: block;
+}

@@ -1,11 +1,11 @@
 <?php
 
 // --local
-define('URL', 'http://localhost/miProyecto/');
+define('URL', 'http://localhost:8080/miProyecto/');
 define('HOST', 'localhost');
 define('DB', 'heroku_ba968b3eda52761');
 define('USER', 'root');
-define('PASSWORD', "");
+define('PASSWORD', "root");
 define('CHARSET', 'utf8mb4');
 
 // --deployed

@@ -1,4 +1,4 @@
-# Proyecto IHC 2020 - 1 -covid
+# Proyecto IHC 2020 - 1
 ## TIENDA CAMARENA
 ### Vistas:
 #### LISTAS: 

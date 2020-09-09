@@ -1,0 +1,16 @@
+#footer{
+    background-color:#ccc;
+    color:black;
+    padding: 20px;
+    width: 100%;
+    align-self: flex-end;
+}
+
+.navbar{
+    background-color:#0bad65;
+}
+
+.navbar-brand{
+    margin-right: 0px
+}
+

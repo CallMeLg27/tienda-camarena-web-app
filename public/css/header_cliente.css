@@ -1,0 +1,24 @@
+.btn#home,
+.btn#shopping{
+  background:white;
+  color:#0bad65 ;
+  height:35px;
+  width:42px
+}
+
+.btn:hover#home,
+.btn:hover#shopping
+{
+    background: #efecec;
+    color:#0bad65 ;
+}
+
+@media screen and (max-width: 768px){
+  .btn#home,
+  .btn#shopping{
+    height: 25px;
+    width: 35px;
+    padding: 0;
+    font-size: 0.8rem;
+  }
+}
