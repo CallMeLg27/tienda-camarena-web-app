@@ -1,6 +1,6 @@
 <div class="border-right" id="sidebar-wrapper">
   <div class="sidebar-heading">
-    <h4 class="center"><img src="<?php echo constant('URL'); ?>public/img/users.png" class="user-image" alt="User Image" id="Image"><br></h4><h5 class="center"><!--<?php echo $this->nombreUsuario ?>--></h5></div>
+    <h4 class="center"><img src="<?php echo constant('URL'); ?>public/img/users.png" class="user-image" alt="User Image" id="Image"><br></h4><h5 class="center"><?php echo $this->nombreUsuario ?></h5></div>
   <div class="list-group list-group-flush">
     <a href="http://localhost:8080/miproyecto/crudrecarga" class="list-group-item list-group-item-action" id="listRecarga"><i class=" fas fa-credit-card"></i>  Recargar tarjeta</a>
     <a href="http://localhost:8080/miproyecto/crudcliente" class="list-group-item list-group-item-action"id="listClientes"><i class="fa fa-users"></i>  Clientes</a>

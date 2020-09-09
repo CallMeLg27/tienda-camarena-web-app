@@ -1,7 +1,8 @@
 <div class="border-right" id="sidebar-wrapper">
   <div class="sidebar-heading"><h4 class="center">¡Bienvenido!</h4>
-    <h4 class="center"><img src="<?php echo constant('URL'); ?>public/img/users.png" class="user-image" alt="User Image" id="Image"><br></h4> <h5 class="center">Cliente</h5> 
-    <h5 class="center"><!--<?php echo $this->nombreUsuario ?>--></h5></div>
+    <h4 class="center"><img src="<?php echo constant('URL'); ?>public/img/users.png" class="user-image" alt="User Image" id="Image"><br></h4> 
+    <h5 class="center">Cliente</h5> 
+    <h5 class="center"><?php echo $this->nombreUsuario ?></h5></div>
   <div class="list-group list-group-flush">
     <a href="http://localhost:8080/miproyecto/crudpedido" class="list-group-item list-group-item-action" id="listComprar"><i class="fas fa-shopping-cart"></i>  Comprar</a>
     <a href="#" class="list-group-item list-group-item-action" id="listPrincipal"><i class="fa fa-home"></i>  Home</a>    

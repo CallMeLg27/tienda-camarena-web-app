@@ -21,15 +21,15 @@
           <li class="dropdown user user-menu open ml-3">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
               <img src="<?php echo constant('URL'); ?>public/img/users.png" class="user-image" alt="User Image">   
-              <span style="font-size:1rem" class="hidden-xs" id="nameuser"><!--<?php echo $this->nombreUsuario ?>--></span>
+              <span style="font-size:1rem" class="hidden-xs" id="nameuser"><?php echo $this->nombreUsuario ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
                 	<img src="public/img/users.png" class="user-image" alt="User Image"> 
-                <p>
+                <p id="cliente">
                   Bienvenido<br>
-                  Cliente - <!--<?php echo $this->nombreUsuario ?>-->
+                  Cliente <br> <?php echo $this->nombreUsuario ?>
                 </p>
               </li>
               <!-- Menu Footer-->

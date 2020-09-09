@@ -1,7 +1,6 @@
 <div  id="sidebar-wrapper">
   <div class="sidebar-heading">
-    <h4 class="center"> <img src="<?php echo constant('URL'); ?>public/img/users.png" class="user-image" alt="User Image" id="Image"><br> </h4> 
-    <h5 class="center"><!--<?php echo $this->nombreUsuario ?>--></h5>
+    <h4 class="center"> <img src="<?php echo constant('URL'); ?>public/img/users.png" class="user-image" alt="User Image" id="Image"><br> </h4> <h5 class="center"><?php echo $this->nombreUsuario ?></h5>
   </div>
   <div class="list-group list-group-flush"> 
     <a href="http://localhost:8080/miproyecto/crudproducto" class="list-group-item list-group-item-action"id="listProducto"><i class="fas fa-shopping-cart"></i>  Productos</a>

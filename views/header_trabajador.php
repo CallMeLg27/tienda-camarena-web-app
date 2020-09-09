@@ -25,15 +25,15 @@
               <img src="public/img/users.png" class="user-image" alt="User Image"> 
               <p id="admin">
                 <i class="fa fa-home"></i> Bienvenido<br>
-                Administrador - <?php echo $this->nombreUsuario ?>
+                Administrador <br> <?php echo $this->nombreUsuario ?>
               </p>
               <p id="empleado">
                 <i class="fa fa-home"></i> Bienvenido<br>
-                Emleado de At. al cliente - <!--<?php echo $this->nombreUsuario ?>-->
+                Emleado de At. al cliente <br> <?php echo $this->nombreUsuario ?>
               </p>
               <p id="almacenero">
                 <i class="fa fa-home"></i> Bienvenido<br>
-                Almacenero - <!--<?php echo $this->nombreUsuario ?>-->
+                Almacenero <br> <?php echo $this->nombreUsuario ?>
               </p>
             </li>
             <!-- Menu Footer-->
