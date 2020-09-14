@@ -7,7 +7,7 @@
 	        </h1>
 	    </a>
 		 <ul class=" nav navbar-nav ml-auto">
-	        <a href="http://localhost:8080/miproyecto/login" class="btn" id="login">
+	        <a href="<?php echo constant('URL'); ?>login" class="btn" id="login">
 	        <strong><i class="fa fa-sign-in"></i> Iniciar sesión</strong>
 	        </a>
 	    </ul>

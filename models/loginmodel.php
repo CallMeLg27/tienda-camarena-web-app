@@ -35,17 +35,23 @@ class LoginModel extends Model{
 
         $empleado = new Empleado();
         try{
-            $query = $this->db->connect()->prepare('SELECT * FROM empleado WHERE usuario = :usuario and contraseña = :contrasenia');
+            $query = $this->db->connect()->prepare('SELECT * FROM empleado WHERE id = :id and contraseña = :contrasenia');
 
-            $query->execute(['usuario' => $username, 'contrasenia' => $password ]);
+            $query->execute(['id' => $username, 'contrasenia' => $password ]);
             if($query->rowCount() == 0){
                 return null;
             }
             while($row = $query->fetch()){
                 $empleado->empleado_id = $row['empleado_id'];
-                $empleado->rol    = $row['rol'];
-                $empleado->usuario    = $row['usuario'];
-                $empleado->contraseña    = $row['contraseña'];
+                $empleado->nombre = $row['nombre'];
+                $empleado->dni = $row['dni'];
+                $empleado->telefono = $row['telefono'];
+                $empleado->email = $row['email'];
+                $empleado->sueldo = $row['sueldo'];
+                $empleado->direccion = $row['direccion'];
+                $empleado->rol = $row['rol'];
+                $empleado->id = $row['id'];
+                $empleado->contraseña = $row['contraseña'];
             }
             return $empleado;
         }catch(PDOException $e){

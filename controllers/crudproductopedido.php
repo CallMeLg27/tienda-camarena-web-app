@@ -1,31 +1,10 @@
 <?php
 
-require_once 'models/cliente.php';
-require_once 'models/empleado.php';
-
-/*******************************************************************************************************************************
-
-DEPRECATED!!!!! USE pedido.php       DEPRECATED!!!!! USE pedido.php       DEPRECATED!!!!! USE pedido.php       DEPRECATED!!!!! USE pedido.php
-
-*********************************************************************************************************************************/
-
-class CRUDPedido extends Controller{
+class CRUDProductoPedido extends Controller{
 
     function __construct(){
         parent::__construct();
         $this->view->mensaje="";
-    }
-
-    function render(){
-    	$pedidos = $this->view->datos = $this->model->get();
-        $this->view->pedidos = $pedidos;
-        $this->view->render('pedido/index');
-    }
-
-    function anadirProducto(){
-        $producto_id = $_POST["producto_id"];
-        $this->view->producto = $this->model->getProductoById($producto_id);
-        $this->render();
     }
 
     function crear(){
@@ -94,18 +73,19 @@ class CRUDPedido extends Controller{
         }
         $this->render();
     }
-
-    function eliminarPedido($param = null){
-        $pedido_id = $param[0];
-
-        if($this->model->delete($pedido_id)){
-            $mensaje ="Pedido eliminado correctamente";
-            //$this->view->mensaje = "Pedido eliminado correctamente";
+    
+    function quitarProducto($param = null){
+        session_start();
+        $producto_id = $param[0];
+        $pedido_id = $_SESSION["pedido_actual_id"];
+        if($this->model->delete($producto_id, $pedido_id)){
+            $mensaje ="Producto eliminado correctamente";
+            //$this->view->mensaje = "Producto eliminado correctamente";
         }else{
-            $mensaje = "No se pudo eliminar al pedido";
-            //$this->view->mensaje = "No se pudo eliminar al pedido";
+            $mensaje = "No se pudo eliminar al producto";
+            //$this->view->mensaje = "No se pudo eliminar al producto";
         }
-        
+
         //$this->render();
 
         echo $mensaje;

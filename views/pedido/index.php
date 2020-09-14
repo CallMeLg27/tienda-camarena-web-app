@@ -27,12 +27,22 @@
             <div class="d-flex justify-content-center">
                 <h2><strong>Registra tu pedido</strong></h2>
             </div>
-            <?php var_dump($this->producto) ?>
+            <?php echo $this->mensaje ?>
+<!--             <p>Producto:</p>
+            <?php var_dump($this->producto); ?>
+            <p>nombreUsuario:</p>
+            <?php var_dump($this->nombreUsuario); ?>
+            <p>tarjeta:</p>
+            <?php var_dump($this->tarjeta); ?>
+            <p>venta:</p>
+            <?php var_dump($this->nro_venta); ?>
+            <p>arr_ProductosDelPedido:</p>
+            <?php var_dump($this->arr_ProductosDelPedido); ?> -->
             <form>
             <div class="container">
                 <div class="col-md-12" style="margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom:auto">
                     <div class="d-flex">
-                        <h3 style="color:##09ea1a"><i class="fas fa-user-circle pr-2"></i><strong>MARIA VILLANUEVA</strong></h3>
+                        <h3 style="color:##09ea1a"><i class="fas fa-user-circle pr-2"></i><strong><?php echo $this->nombreUsuario; ?></strong></h3>
                     </div>
                     <br>
                     <div class="row">
@@ -42,7 +52,7 @@
                                     <p><strong>NRO CUENTA:</strong></p>
                                 </div>
                                 <div class="col-md-8">
-                                    <p>************1</p>
+                                    <p><?php echo $this->tarjeta->tarjeta_id; ?></p>
                                 </div>
                             </div>
                             <div class="form-row ">
@@ -50,7 +60,7 @@
                                     <p><strong>SALDO DISPONIBLE:</strong></p>
                                 </div>
                                 <div class="col-md-8">
-                                    <p>s/. 250</p>
+                                    <p><?php echo $this->tarjeta->saldo; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +70,7 @@
                                     <p><strong>NRO VENTA:</strong></p>
                                 </div>
                                 <div class="col-md-8">
-                                    <p>0001</p>
+                                    <p><?php echo $this->nro_venta; ?></p>
                                 </div>
                             </div>
                             <div class="form-row ">
@@ -68,7 +78,10 @@
                                     <p><strong>FECHA</strong></p>
                                 </div>
                                 <div class="col-md-8">
-                                    <p>17/02/2014</p>
+                                    <p><?php 
+                                    $fecha_imprimible = $this->fecha['mday'].'-'.$this->fecha['mon'].'-'.$this->fecha['year'];
+                                    echo $fecha_imprimible;
+                                    ?></p>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +90,7 @@
             </div>
             </form>
             
-            <form action="<?php echo constant('URL'); ?>crudpedido/anadirProducto" method="POST">
+            <form  action="<?php echo constant('URL'); ?>crearpedido/insertarProducto" method="POST">
                 <div class="col-md-6" style="margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom:auto">
                     <div class="form-row py-2">
                         <div class="col-md-4">
@@ -92,7 +105,7 @@
                             <p><strong>CANTIDAD:</strong></p>
                         </div>
                         <div class="col-md-8">
-                            <input type="text" class="form-control" placeholder="Ingrese cantidad...">
+                            <input type="number" name="cantidad" class="form-control" placeholder="Ingrese cantidad...">
                         </div>
                     </div>
                     <div class="d-flex flex-row justify-content-center mt-4">
@@ -104,58 +117,46 @@
             </form>
             <center>
                 <div class="container mt-4">
-                    <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
-                        <table class="table table-striped">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Código</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Descripción</th>
-                                    <th scope="col">Costo S/.</th>
-                                    <th scope="col">Cantidad</th>
-                                    <th scope="col">Total S/.</th>
-                                    <th scope="col">Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">P001</th>
-                                    <td>AGUA SAN MATEO 600ML</td>
-                                    <td>DISTRIBUIDORA BACKUS</td>
-                                    <td>1.5</td>
-                                    <td>2</td>
-                                    <td>3.0</td>
-                                    <td>
-                                        <div role="group" class="mb-2 btn-group-md btn-group">
-                                            <button class="btn-shadow btn-hover-shine btn btn-success btn-md btn-pill pl-3" title="Editar">
-                                                <i class="fa fa-pencil" aria-hidden="true"></i>
-                                            </button>
-                                            <button class="btn-shadow btn-hover-shine btn btn-danger btn-md btn-pill pr-3" title="Eliminar">
-                                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">P002</th>
-                                    <td>LECHE GLORIA CHICA</td>
-                                    <td>TARRO</td>
-                                    <td>3.2</td>
-                                    <td>1</td>
-                                    <td>3.2</td>
-                                    <td>
-                                        <div role="group" class="mb-2 btn-group-md btn-group">
-                                            <button class="btn-shadow btn-hover-shine btn btn-success btn-md btn-pill pl-3" title="Editar" >
-                                                <i class="fa fa-pencil" aria-hidden="true"></i>
-                                            </button>
-                                            <button class="btn-shadow btn-hover-shine btn btn-danger btn-md btn-pill pr-3" title="Eliminar">
-                                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                        <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
+                                <table class="table table-striped">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Código</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Descripción</th>
+                                            <th scope="col">Costo S/.</th>
+                                            <th scope="col">Cantidad</th>
+                                            <th scope="col">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody-productos">
+                                        <?php
+                                            require_once 'models/producto.php';
+                                            foreach ($this->arr_ProductosDelPedido as $row) {
+                                                $producto = $row;
+                                        ?>
+                                        
+                                                <tr id="fila-<?php echo $producto->codigo; ?>">
+                                                    <td><?php echo $producto->codigo; ?></td>
+                                                    <td><?php echo $producto->nombre; ?></td>
+                                                    <td><?php echo $producto->descripcion; ?></td>
+                                                    <td><?php echo $producto->costo; ?></td>
+                                                    <td><?php echo $producto->cantidad; ?></td>
+                                                    <td>
+                                                        <div role="group" class="mb-2 btn-group-md btn-group">
+                                                            <button data-producto_id="<?php echo $producto->codigo; ?>" class="bEditar btn-shadow btn-hover-shine btn btn-success btn-md btn-pill pl-3" title="Editar">
+                                                                <i class="iEditar fa fa-pencil" aria-hidden="true"></i>
+                                                            </button>
+                                                            <button data-producto_id="<?php echo $producto->codigo; ?>" class="bEliminar btn-shadow btn-hover-shine btn btn-danger btn-md btn-pill pr-3" title="Eliminar">
+                                                                <i class="iEliminar fa fa-trash" aria-hidden="true"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
                     </div>
                 </div>
             </center>   
@@ -166,7 +167,15 @@
                                 <p><strong>TOTAL A PAGAR:</strong></p>
                             </div>
                             <div class="col-md-1">
-                                <p><strong>6.4</strong></p>
+                                <p><strong>
+                                    <?php 
+                                    $total_a_pagar = 0;
+                                    foreach ($this->arr_ProductosDelPedido as $item) {
+                                        $total_a_pagar += $item->cantidad * $item->costo;
+                                    }
+                                    echo $total_a_pagar;
+                                    ?>
+                                </strong></p>
                             </div>
                     </div>
                     <div class="form-row ">
@@ -174,7 +183,11 @@
                             <p><strong>SALDO:</strong></p>
                         </div>
                         <div class="col-md-2">
-                                <p><strong>2222</strong></p>
+                                <p><strong>
+                                    <?php 
+                                    echo $this->tarjeta->saldo - $total_a_pagar;
+                                    ?>
+                                </strong></p>
                             </div>
                     </div>
                 </div>
@@ -189,7 +202,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-user-circle pr-2"></i><strong>MARIA VILLANUEVA</strong></h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-user-circle pr-2"></i><strong><?php echo $this->nombreUsuario; ?></strong></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -200,7 +213,7 @@
                                                     <p><strong>NRO CUENTA:</strong></p>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <p>************1</p>
+                                                    <p><?php echo $this->tarjeta->tarjeta_id; ?></p>
                                                 </div>
                                             </div>
                                             <div class="form-row ">
@@ -208,7 +221,7 @@
                                                     <p><strong>SALDO DISPONIBLE:</strong></p>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <p>s/. 250</p>
+                                                    <p><?php echo $this->tarjeta->saldo; ?></p>
                                                 </div>
                                             </div>
                                         
@@ -218,7 +231,7 @@
                                                     <p><strong>NRO VENTA:</strong></p>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <p>0001</p>
+                                                    <p><?php echo $this->nro_venta; ?></p>
                                                 </div>
                                             </div>
                                             <div class="form-row ">
@@ -226,7 +239,7 @@
                                                     <p><strong>FECHA</strong></p>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <p>17/02/2014</p>
+                                                    <p><?php echo $fecha_imprimible ?></p>
                                                 </div>
                                             </div>
                                         <hr>
@@ -235,7 +248,7 @@
                                                     <p><strong>TOTAL A PAGAR:</strong></p>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <p>S/. 13.0</p>
+                                                    <p><?php echo $total_a_pagar; ?></p>
                                                 </div>
                                             </div>
                                             <div class="form-row ">
@@ -243,7 +256,7 @@
                                                     <p><strong>SALDO</strong></p>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <p>237</p>
+                                                    <p><?php echo $this->tarjeta->saldo - $total_a_pagar;?></p>
                                                 </div>
                                             </div>
                   </div>

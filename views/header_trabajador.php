@@ -39,7 +39,7 @@
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="pull-right">
-                <a href="http://localhost:8080/miproyecto/index" class="btn btn-danger btn-flat">Cerrar sesión</a>
+                <a href="<?php echo constant('URL'); ?>index" class="btn btn-danger btn-flat">Cerrar sesión</a>
               </div>
             </li>
           </ul>

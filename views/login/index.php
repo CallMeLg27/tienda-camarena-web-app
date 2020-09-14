@@ -42,7 +42,7 @@
                     <div class=" contenedor col-sm-8"style="background: #ffffff">
                         <div class="content">
                            <div class="d-flex" >
-                                <a href="http://localhost:8080/miproyecto/" class=" ml-auto btn-danger btn" id="close"><i class="fas fa-times"></i> </a>
+                                <a href="<?php echo constant('URL'); ?>" class=" ml-auto btn-danger btn" id="close"><i class="fas fa-times"></i> </a>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <h2><strong>Iniciar sesión</strong></h2>

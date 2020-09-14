@@ -4,7 +4,7 @@
     <h5 class="center">Cliente</h5> 
     <h5 class="center"><?php echo $this->nombreUsuario ?></h5></div>
   <div class="list-group list-group-flush">
-    <a href="http://localhost:8080/miproyecto/crudpedido" class="list-group-item list-group-item-action" id="listComprar"><i class="fas fa-shopping-cart"></i>  Comprar</a>
+    <a href="<?php echo constant('URL'); ?>crudpedido" class="list-group-item list-group-item-action" id="listComprar"><i class="fas fa-shopping-cart"></i>  Comprar</a>
     <a href="#" class="list-group-item list-group-item-action" id="listPrincipal"><i class="fa fa-home"></i>  Home</a>    
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>

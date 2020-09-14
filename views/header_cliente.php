@@ -8,12 +8,12 @@
 	<div class="navbar-custom-menu ml-auto">
         <ul class="nav navbar-nav">
         <li>
-      		<a href="#" class="btn" id="home">
+      		<a href="<?php echo constant('URL'); ?>" class="btn" id="home">
             	<i  class="fa fa-home" id="iconHome"></i>
         	</a>
         </li>
         <li class="ml-3">
-      			<a href="http://localhost:8080/miproyecto/pedido" class="btn" id="shopping">
+      			<a href="<?php echo constant('URL'); ?>crearpedido/crear" class="btn" id="shopping">
       				<i  class="fa fa-shopping-cart" id="iconShopping"></i>
             	</a>    	
         </li>
@@ -26,7 +26,7 @@
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                	<img src="public/img/users.png" class="user-image" alt="User Image"> 
+                	<img src="<?php echo constant('URL'); ?>public/img/users.png" class="user-image" alt="User Image"> 
                 <p id="cliente">
                   Bienvenido<br>
                   Cliente <br> <?php echo $this->nombreUsuario ?>
@@ -35,12 +35,11 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="http://localhost:8080/miproyecto/index" class="btn btn-danger btn-flat">Cerrar sesión</a>
+                  <a href="<?php echo constant('URL'); ?>logout" class="btn btn-danger btn-flat">Cerrar sesión</a>
                 </div>
               </li>
             </ul>
           </li>
-
         </ul>
       </div>
 

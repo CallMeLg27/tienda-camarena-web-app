@@ -6,10 +6,8 @@ class Logout extends Controller{
         $this->view->mensaje="";
         session_start();
         unset($_SESSION["usuario_actual"]);
-    }
-
-    function render(){
-        $this->view->render('logout/index');
+        unset($_SESSION["pedido_actual_id"]);
+        header('Location: '.constant('URL'));
     }
 }
 ?>

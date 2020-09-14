@@ -1,4 +1,6 @@
 <?php
+require_once 'models/cliente.php';
+require_once 'models/empleado.php';
 
 class CRUDProducto extends Controller{
 
@@ -8,7 +10,10 @@ class CRUDProducto extends Controller{
     }
 
     function render(){
-    	$productos = $this->view->datos = $this->model->get();
+        session_start();
+        $usuario_actual = unserialize($_SESSION["usuario_actual"]);
+    	$this->view->nombreUsuario = $usuario_actual->nombre;
+        $productos = $this->view->datos = $this->model->get();
         $this->view->productos = $productos;
         $this->view->render('producto/index');
     }

@@ -19,22 +19,17 @@ class Login extends Controller{
         }
 
         if (get_class($usuarioActivo)=="Cliente"){
-            echo "Cliente";
             session_start();
             $_SESSION["usuario_actual"] = serialize($usuarioActivo);
-            $this->view->usuarioActivo = $usuarioActivo;
-            $this->view->mensaje="Acceso correcto";
         }
 
         if (get_class($usuarioActivo)=="Empleado"){
             session_start();
-            echo $usuarioActivo->rol;
             $_SESSION["usuario_actual"] = serialize($usuarioActivo);
-            $this->view->usuarioActivo = $usuarioActivo;
-            $this->view->mensaje="Acceso correcto";
-            // var_dump(unserialize($_SESSION["usuario_actual"]));
         }
-        $this->render();
+
+        header('Location: '.constant('URL'));
+        unset($_SESSION["pedido_actual_id"]);
     }
 
     // verifica que los campos de usuario y contraseña sean válidos

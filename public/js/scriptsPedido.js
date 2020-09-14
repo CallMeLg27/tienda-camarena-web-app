@@ -3,16 +3,16 @@ const botonesEditar = document.querySelectorAll(".bEditar");
 
 items.forEach(item => {
   item.addEventListener("click", function() {
-    let pedido_id = this.dataset.pedido_id;
+    let producto_id = this.dataset.producto_id;
     // alert(this.dataset.pedido_id);
     let confirm = window.confirm("Deseas eliminar el elemento?");
 
     if (confirm) {
-      httpRequest("localhost/miProyecto/crudpedido/eliminarPedido/" + pedido_id, function(e) {
+      httpRequest("http://localhost/miProyecto/crudproductopedido/quitarProducto/" + producto_id, function(e) {
         // httpRequest("https://tienda-camarena.herokuapp.com/crudpedido/eliminarPedido/" + pedido_id, function(e) {
         console.log(this.responseText);
-        const tbody = document.querySelector("#tbody-pedidos");
-        const fila = document.querySelector("#fila-" + pedido_id);
+        const tbody = document.querySelector("#tbody-productos");
+        const fila = document.querySelector("#fila-" + producto_id);
         tbody.removeChild(fila);
       })
     }

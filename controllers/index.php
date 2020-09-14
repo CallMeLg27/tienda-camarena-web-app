@@ -14,10 +14,15 @@ class Index extends Controller{
             $usuarioLogeado = true;
             $usuario_actual = unserialize($_SESSION["usuario_actual"]);
             // var_dump($usuario_actual);
-            $tipoUsuario = $usuario_actual->rol;
+            if (get_class($usuario_actual)=='Empleado'){
+                $tipoUsuario = $usuario_actual->rol;
+            }
+            else{
+                $tipoUsuario = 'cliente';
+            }
         }
         if($usuarioLogeado){
-            $this->view->nombreUsuario = $usuario_actual->usuario;
+            $this->view->nombreUsuario = $usuario_actual->nombre;
             $this->view->render('users/'.$tipoUsuario.'/index');
         }
         else{
