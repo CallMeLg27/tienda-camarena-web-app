@@ -3,7 +3,7 @@
 // --local
 define('URL', 'http://localhost/miProyecto/');
 define('HOST', 'localhost');
-define('DB', 'heroku_ba968b3eda52761');
+define('DB', 'tienda_camarena');
 define('USER', 'root');
 define('PASSWORD', "");
 define('CHARSET', 'utf8mb4');

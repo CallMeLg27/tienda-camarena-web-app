@@ -1,5 +1,6 @@
 const items = document.querySelectorAll(".bEliminar");
 const botonesEditar = document.querySelectorAll(".bEditar");
+const bPagar = document.querySelector("#bPagar");
 
 items.forEach(item => {
   item.addEventListener("click", function() {
@@ -99,6 +100,13 @@ botonesEditar.forEach(item => {
   });
 });
 
+bPagar.addEventListener("click", function() {
+  httpRequest("http://localhost/miProyecto/crearpedido/ejecutar/", function(e) {
+    // httpRequest("https://tienda-camarena.herokuapp.com/crudpedido/eliminarPedido/" + pedido_id, function(e) {
+    alert("Tu compra ha sido relizada con éxito")
+    location.replace("http://localhost/miProyecto/");
+  })
+});
 
 function httpRequest(url, callback) {
   const http = new XMLHttpRequest();

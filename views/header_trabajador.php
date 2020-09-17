@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark static-top w-100">
-    <a class="navbar-brand">
+    <a href="<?php echo constant('URL'); ?>" class="navbar-brand">
         <h1 id="header">
             <i class="fas fa-shopping-cart"></i>
             CAMARENA

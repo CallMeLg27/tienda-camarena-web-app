@@ -38,7 +38,7 @@ class CrearPedido extends Controller{
             $this->view->mensaje = "Nuevo pedido creado correctamente";
             $this->render();
         }else{
-            $this->view->mensaje = "No se ha creado un nuevo pedido";
+            // $this->view->mensaje = "No se ha creado un nuevo pedido";
             $this->render();
         }
     }
@@ -128,6 +128,9 @@ class CrearPedido extends Controller{
 
         $this->view->tarjeta->saldo = $tarjeta_actualizada->saldo;
         $this->view->render('pedido/index');
+
+        // borrar la variable pedido de la sesion
+        unset($_SESSION["pedido_actual_id"]);
     }
 }
 ?>
