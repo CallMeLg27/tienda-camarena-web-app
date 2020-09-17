@@ -12,9 +12,9 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
         <!-- Nuestros css-->
         <link rel="icon" href="<?php echo constant('URL'); ?>public/img/logo.png" sizes="32x32">  
-        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/main.css ?9.0">
-        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/login.css ?9.0">
-        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/body.css ?9.0">           
+        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/main.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/login.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/body.css">           
     </head>
     <body>
         <?php echo $this->mensaje ?>

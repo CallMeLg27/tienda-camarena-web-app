@@ -13,11 +13,11 @@
         <link rel="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
         <!-- Nuestros css-->
         <link rel="icon" href="<?php echo constant('URL'); ?>public/img/logo.png" sizes="32x32">
-        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/main.css ?5.0">
-        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/head-foot.css ?3.0">  
-        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/header_cliente.css ?6.0">
-        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/cuenta_usuario.css ?6.0">
-        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/home.css ?6.0">
+        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/main.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/head-foot.css">  
+        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/header_cliente.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/cuenta_usuario.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/home.css">
     </head>
     <body>
         <?php require_once 'views/header_cliente.php'; ?>

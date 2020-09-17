@@ -14,13 +14,13 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
       <!-- Nuestros css-->
       <link rel="icon" href="<?php echo constant('URL'); ?>public/img/logo.png" sizes="32x32"> 
-      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/main.css ?3.0">
-      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/head-foot.css ?3.0">  
-      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/sidebar.css ?4.0">
-      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/header-trabajador.css ?4.0">
-      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/cuenta_usuario.css ?1.0">
-      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/container.css ?4.0">
-      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/stock_productos.css ?4.0">     
+      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/main.css">
+      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/head-foot.css">  
+      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/sidebar.css">
+      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/header-trabajador.css">
+      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/cuenta_usuario.css">
+      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/container.css">
+      <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/stock_productos.css">     
   </head>
   <body>
     <?php require_once 'views/header_trabajador.php'; ?>   
