@@ -5,6 +5,7 @@ require_once 'models/empleado.php';
 class Index extends Controller{
     function __construct(){
         parent::__construct();
+        $this->view->mensaje="";
     }
 
     function render(){
@@ -28,10 +29,6 @@ class Index extends Controller{
         else{
             $this->view->render('index/index'); 
         }
-    }
-
-    function saludo(){
-        echo "<p>Hola a todos<p>";
     }
 }
 

@@ -1,4 +1,5 @@
 <?php
+require_once 'models/empleado.php';
 
 class CRUDCliente extends Controller{
 
@@ -8,6 +9,10 @@ class CRUDCliente extends Controller{
     }
 
     function render(){
+        session_start();
+        $usuario_actual = unserialize($_SESSION["usuario_actual"]);
+        $this->view->nombreUsuario = $usuario_actual->nombre;
+        
     	$clientes = $this->view->datos = $this->model->get();
         $this->view->clientes = $clientes;
         $this->view->render('cliente/index');

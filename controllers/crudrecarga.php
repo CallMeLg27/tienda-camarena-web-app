@@ -1,5 +1,5 @@
 <?php
-
+require_once 'models/empleado.php';
 class CRUDRecarga extends Controller{
 
     function __construct(){
@@ -8,6 +8,9 @@ class CRUDRecarga extends Controller{
     }
 
     function render(){
+        session_start();
+        $usuario_actual = unserialize($_SESSION["usuario_actual"]);
+        $this->view->nombreUsuario = $usuario_actual->nombre;
     	// $recargas = $this->view->datos = $this->model->get();
         // $this->view->recargas = $recargas;
         $this->view->render('recarga/index');

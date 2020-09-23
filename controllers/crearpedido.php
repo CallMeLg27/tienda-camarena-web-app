@@ -62,7 +62,6 @@ class CrearPedido extends Controller{
             // $this->view->render('producto/index');
             $this->render();
         }else{
-            $this->view->mensaje = "Error aqui!";
             $this->render();
         }
     }
@@ -131,6 +130,10 @@ class CrearPedido extends Controller{
 
         // borrar la variable pedido de la sesion
         unset($_SESSION["pedido_actual_id"]);
+    }
+
+    function verificarPedido(){
+
     }
 }
 ?>

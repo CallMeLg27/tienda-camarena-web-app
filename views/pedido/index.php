@@ -75,7 +75,7 @@
                             </div>
                             <div class="form-row ">
                                 <div class="col-md-4">
-                                    <p><strong>FECHA</strong></p>
+                                    <p><strong>FECHA:</strong></p>
                                 </div>
                                 <div class="col-md-8">
                                     <p><?php 
@@ -236,7 +236,7 @@
                                             </div>
                                             <div class="form-row ">
                                                 <div class="col-md-6">
-                                                    <p><strong>FECHA</strong></p>
+                                                    <p><strong>FECHA:</strong></p>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <p><?php echo $fecha_imprimible ?></p>
@@ -253,7 +253,7 @@
                                             </div>
                                             <div class="form-row ">
                                                 <div class="col-md-6">
-                                                    <p><strong>SALDO</strong></p>
+                                                    <p><strong>SALDO:</strong></p>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <p><?php echo $this->tarjeta->saldo - $total_a_pagar;?></p>

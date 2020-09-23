@@ -1,5 +1,5 @@
 <?php
-
+require_once 'models/empleado.php';
 class CRUDPromocion extends Controller{
 
     function __construct(){
@@ -8,7 +8,11 @@ class CRUDPromocion extends Controller{
     }
 
     function render(){
-    	$promociones = $this->view->datos = $this->model->get();
+        session_start();
+        $usuario_actual = unserialize($_SESSION["usuario_actual"]);
+        $this->view->nombreUsuario = $usuario_actual->nombre;
+        
+        $promociones = $this->view->datos = $this->model->get();
         $this->view->promociones = $promociones;
         $this->view->render('promocion/index');
     }

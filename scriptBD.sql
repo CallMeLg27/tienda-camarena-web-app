@@ -115,11 +115,11 @@ CREATE TABLE IF NOT EXISTS `empleado` (
 DELETE FROM `empleado`;
 /*!40000 ALTER TABLE `empleado` DISABLE KEYS */;
 INSERT INTO `empleado` (`empleado_id`, `nombre`, `dni`, `telefono`, `email`, `sueldo`, `direccion`, `id`, `contraseña`, `rol`) VALUES
-	('E0001', 'Libardo', 'Lara', '25487615', 'aaaaa@gmail.com', 2000, 'Calle Los Olmos 123', 'admin','aaaaa','11111'),
-	('E0002', 'Angie', 'Palacios', '84597612', 'bbbbb@gmail.com', 750, 'Calle Los Olmos 123', 'almacenero','bbbbb','22222'),
-	('E0003', 'Linda', 'Vargas', '48721044', 'ccccc@gmail.com', 800, 'Calle Los Olmos 123', 'atCliente','ccccc','33333'),
-	('E0004', 'Yordan', 'Sullca', '75854312', 'ddddd@gmail.com', 800, 'Calle Los Olmos 123', 'atCliente','ddddd','44444'),
-	('E0005', 'Luis', 'Esquivel', '48726523', 'eeeee@gmail.com', 800, 'Calle Los Olmos 123', 'atCliente','eeeee','55555');
+	('E0001', 'Libardo', 'Lara', '25487615', 'aaaaa@gmail.com', 2000, 'Calle Los Olmos 123','aaaaa','11111', 'admin'),
+	('E0002', 'Angie', 'Palacios', '84597612', 'bbbbb@gmail.com', 750, 'Calle Los Olmos 123','bbbbb','22222', 'almacenero'),
+	('E0003', 'Linda', 'Vargas', '48721044', 'ccccc@gmail.com', 800, 'Calle Los Olmos 123''ccccc','33333', 'atCliente',),
+	('E0004', 'Yordan', 'Sullca', '75854312', 'ddddd@gmail.com', 800, 'Calle Los Olmos 123','ddddd','44444', 'atCliente'),
+	('E0005', 'Luis', 'Esquivel', '48726523', 'eeeee@gmail.com', 800, 'Calle Los Olmos 123','eeeee','55555', 'atCliente');
 /*!40000 ALTER TABLE `empleado` ENABLE KEYS */;
 
 -- Volcando estructura para tabla heroku_ba968b3eda52761.pedido

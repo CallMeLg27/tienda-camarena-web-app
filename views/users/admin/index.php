@@ -1,3 +1,6 @@
+<?php 
+header('location: '.constant('URL').'crudcliente');
+ ?>
 <!DOCTYPE html>
 <html>
     <head>

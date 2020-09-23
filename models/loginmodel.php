@@ -30,7 +30,7 @@ class LoginModel extends Model{
             }
         }catch(PDOException $e){
             //no es cliente
-            echo $e;
+            //echo $e;
         }
 
         $empleado = new Empleado();
@@ -56,7 +56,7 @@ class LoginModel extends Model{
             return $empleado;
         }catch(PDOException $e){
             //no es empleado
-            echo $e;
+            //echo $e;
         }
     }
 
