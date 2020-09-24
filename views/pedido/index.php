@@ -60,7 +60,7 @@
                                     <p><strong>SALDO DISPONIBLE:</strong></p>
                                 </div>
                                 <div class="col-md-8">
-                                    <p><?php echo $this->tarjeta->saldo; ?></p>
+                                    <p>S/. <?php echo $this->tarjeta->saldo; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -166,14 +166,14 @@
                         <div class="col-md-4">
                                 <p><strong>TOTAL A PAGAR:</strong></p>
                             </div>
-                            <div class="col-md-1">
+                            <div class="col-md-4">
                                 <p><strong>
                                     <?php 
                                     $total_a_pagar = 0;
                                     foreach ($this->arr_ProductosDelPedido as $item) {
                                         $total_a_pagar += $item->cantidad * $item->costo;
                                     }
-                                    echo $total_a_pagar;
+                                    echo 'S/. '.$total_a_pagar;
                                     ?>
                                 </strong></p>
                             </div>
@@ -182,8 +182,8 @@
                         <div class="col-md-4">
                             <p><strong>SALDO:</strong></p>
                         </div>
-                        <div class="col-md-2">
-                                <p><strong>
+                        <div class="col-md-4">
+                                <p><strong>S/. 
                                     <?php 
                                     echo $this->tarjeta->saldo - $total_a_pagar;
                                     ?>
@@ -194,7 +194,7 @@
             </div>
             <div class="d-flex flex-row justify-content-center mt-2">
                 <div class="col-md-2">
-                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus-circle"></i> PAGAR</button>
+                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-money-check"></i> PAGAR</button>
                  </div>
             </div>
             <br>
@@ -221,7 +221,7 @@
                                                     <p><strong>SALDO DISPONIBLE:</strong></p>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <p><?php echo $this->tarjeta->saldo; ?></p>
+                                                    <p>S/. <?php echo $this->tarjeta->saldo; ?></p>
                                                 </div>
                                             </div>
                                         
@@ -248,7 +248,7 @@
                                                     <p><strong>TOTAL A PAGAR:</strong></p>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <p><?php echo $total_a_pagar; ?></p>
+                                                    <p>S/. <?php echo $total_a_pagar; ?></p>
                                                 </div>
                                             </div>
                                             <div class="form-row ">
@@ -256,7 +256,7 @@
                                                     <p><strong>SALDO:</strong></p>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <p><?php echo $this->tarjeta->saldo - $total_a_pagar;?></p>
+                                                    <p>S/. <?php echo $this->tarjeta->saldo - $total_a_pagar;?></p>
                                                 </div>
                                             </div>
                   </div>
