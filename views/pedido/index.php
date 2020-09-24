@@ -27,7 +27,7 @@
             <div class="d-flex justify-content-center">
                 <h2><strong>Registra tu pedido</strong></h2>
             </div>
-            <?php echo $this->mensaje ?>
+            <?php require 'views/alertModal.php'; ?>
 <!--             <p>Producto:</p>
             <?php var_dump($this->producto); ?>
             <p>nombreUsuario:</p>
@@ -277,5 +277,12 @@
         <script src="https://kit.fontawesome.com/27d40e429f.js" crossorigin="anonymous"></script>
           <!--Scripts Lógica de Negocio--> 
         <script src="<?php echo constant('URL'); ?>/public/js/scriptsPedido.js"></script>
+        <!--Script alertModal-->
+        <script type="text/javascript" src="<?php echo constant('URL'); ?>/public/js/alertModal.js"></script>
+        <!--Ejecutamos el script alertModal-->
+        <script>
+            if ("<?php echo $this->mensaje ?>" != "")
+                alertModal("","<?php echo $this->mensaje ?>")
+        </script>
     </body>
 </html>

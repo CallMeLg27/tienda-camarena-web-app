@@ -99,7 +99,7 @@ class CrudTarjetaModel extends Model{
             ]);
             return true;
         }catch(PDOException $e){
-            echo $e;
+            //echo $e;
             return false;
         }
     }

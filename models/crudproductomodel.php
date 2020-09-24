@@ -47,6 +47,69 @@ class CrudProductoModel extends Model{
         }
     }
 
+    public function getMenorA5(){
+        $items = [];
+        try{
+            $query = $this->db->connect()->query('SELECT * FROM producto where cantidad<5');
+            
+            while($row = $query->fetch()){
+                $item = new Producto();
+                $item->producto_id = $row['producto_id'];
+                $item->nombre    = $row['nombre'];
+                $item->descripcion  = $row['descripcion'];
+                $item->cantidad  = $row['cantidad'];
+                $item->costo  = $row['costo'];
+
+                array_push($items, $item);
+            }
+            return $items;
+        }catch(PDOException $e){
+            return [];
+        }
+    }
+
+    public function getMenorA10(){
+        $items = [];
+        try{
+            $query = $this->db->connect()->query('SELECT * FROM producto where cantidad<10');
+            
+            while($row = $query->fetch()){
+                $item = new Producto();
+                $item->producto_id = $row['producto_id'];
+                $item->nombre    = $row['nombre'];
+                $item->descripcion  = $row['descripcion'];
+                $item->cantidad  = $row['cantidad'];
+                $item->costo  = $row['costo'];
+
+                array_push($items, $item);
+            }
+            return $items;
+        }catch(PDOException $e){
+            return [];
+        }
+    }
+
+    public function getMenorA20(){
+        $items = [];
+        try{
+            $query = $this->db->connect()->query('SELECT * FROM producto where cantidad<10');
+            
+            while($row = $query->fetch()){
+                $item = new Producto();
+                $item->producto_id = $row['producto_id'];
+                $item->nombre    = $row['nombre'];
+                $item->descripcion  = $row['descripcion'];
+                $item->cantidad  = $row['cantidad'];
+                $item->costo  = $row['costo'];
+
+                array_push($items, $item);
+            }
+            return $items;
+        }catch(PDOException $e){
+            return [];
+        }
+    }
+
     public function getById($id){
         $item = new Producto();
         try{

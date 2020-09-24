@@ -31,12 +31,15 @@
           <div class="d-flex justify-content-center" id="title">
             <h2 ><strong >Stock de productos</strong></h2>
           </div>
-          <div class="container d-flex flex-row-reverse mt-2" id="selection">    
-            <div class="ml-auto" >
-              <select  class="selectpicker" data-style="btn-primary">
-                <option>Todos</option>
-                <option>Menor a 10</option>
-              </select>
+          <div class="container d-flex flex-row-reverse">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Seleccionar
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="<?php echo constant('URL');?>stockproductos">Todos</a>
+              <a class="dropdown-item" href="<?php echo constant('URL');?>stockproductos/menorA20">Menor a 20</a>
+              <a class="dropdown-item" href="<?php echo constant('URL');?>stockproductos/menorA10">Menor a 10</a>
+              <a class="dropdown-item" href="<?php echo constant('URL');?>stockproductos/menorA5">Por vencer</a>
             </div>
           </div>
           <div class="container mt-4">
@@ -53,7 +56,8 @@
                 </thead>
                 <tbody id="tbody-productos">
                   
-                  <!--<?php require 'models/producto.php';
+                  <?php
+                      require_once 'models/producto.php';
                       foreach ($this->productos as $row) {
                           $producto = new Producto();
                           $producto = $row;
@@ -65,7 +69,7 @@
                         <td><?php echo $producto->costo; ?></td>
                         <td><?php echo $producto->cantidad; ?></td>
                       </tr>
-                  <?php } ?>-->
+                  <?php } ?>
                 </tbody>
               </table>
             </div>

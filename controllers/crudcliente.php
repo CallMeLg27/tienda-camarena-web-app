@@ -12,7 +12,7 @@ class CRUDCliente extends Controller{
         session_start();
         $usuario_actual = unserialize($_SESSION["usuario_actual"]);
         $this->view->nombreUsuario = $usuario_actual->nombre;
-        
+
     	$clientes = $this->view->datos = $this->model->get();
         $this->view->clientes = $clientes;
         $this->view->render('cliente/index');
@@ -30,7 +30,7 @@ class CRUDCliente extends Controller{
         $nuevo_cliente->direccion = $_POST['direccion'];
         $nuevo_cliente->telefono = $_POST['telefono'];
         $nuevo_cliente->email = $_POST['email'];
-        $nuevo_cliente->estado = $_POST['estado'];
+        $nuevo_cliente->estado = "activo";
 
         // Se valida el cliente antes de intentar agregarlo a la BD
         if (!$this->validarCliente($nuevo_cliente)){

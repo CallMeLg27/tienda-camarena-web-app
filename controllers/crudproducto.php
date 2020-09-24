@@ -10,7 +10,9 @@ class CRUDProducto extends Controller{
     }
 
     function render(){
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
         $usuario_actual = unserialize($_SESSION["usuario_actual"]);
     	$this->view->nombreUsuario = $usuario_actual->nombre;
         $productos = $this->view->datos = $this->model->get();

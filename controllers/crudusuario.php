@@ -1,4 +1,5 @@
 <?php
+require_once 'models/empleado.php';
 
 class CRUDUsuario extends Controller{
 
@@ -8,13 +9,16 @@ class CRUDUsuario extends Controller{
     }
 
     function render(){
+        session_start();
+        $usuario_actual = unserialize($_SESSION["usuario_actual"]);
+        $this->view->nombreUsuario = $usuario_actual->nombre;
+        
     	$usuarios = $this->view->datos = $this->model->get();
         $this->view->usuarios = $usuarios;
         $this->view->render('usuario/index');
     }
 
     function crear(){
-
         $nuevo_usuario = new Usuario;
         $nuevo_usuario->usuario_id = $_POST['usuario_id'];
         $nuevo_usuario->nombre = $_POST['nombre'];

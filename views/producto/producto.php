@@ -27,9 +27,7 @@
             <?php require 'views/sidebar/almacenero.php'; ?> 
             <div id="page-content-wrapper"class="w-100">
                 <div class="container" id="contenido">               
-                    <div id="mensaje" class="d-flex justify-content-center">
-                        <?php echo $this->mensaje; ?>
-                    </div>
+                    <?php require 'views/alertModal.php'; ?>
                     <div class=" center d-flex justify-content-center">
                         <h2><strong>Registra tus productos</strong></h2>
                     </div>
@@ -151,5 +149,12 @@
         <script src="https://kit.fontawesome.com/27d40e429f.js" crossorigin="anonymous"></script>
          <!--Scripts Lógica de Negocio--> 
         <script src="<?php echo constant('URL'); ?>/public/js/scriptsProducto.js"></script>
+        <!--Script alertModal-->
+        <script type="text/javascript" src="<?php echo constant('URL'); ?>/public/js/alertModal.js"></script>
+        <!--Ejecutamos el script alertModal-->
+        <script>
+            if ("<?php echo $this->mensaje ?>" != "")
+                alertModal("","<?php echo $this->mensaje ?>")
+        </script>
     </body>
 </html>

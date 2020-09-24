@@ -17,7 +17,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/body.css">           
     </head>
     <body>
-        <?php echo $this->mensaje ?>
+        <?php require 'views/alertModal.php'; ?>
         <div class="container d-flex justify-content-center" >
             <div class="col-sm-8 ">
                 <div class="row">
@@ -88,6 +88,15 @@
     	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     	<!--Iconos-->
          <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <!--Script alertModal-->
+        <script type="text/javascript" src="<?php echo constant('URL'); ?>/public/js/alertModal.js"></script>
+        <!--Ejecutamos el script alertModal-->
+        <script>
+            if ("<?php echo $this->mensaje ?>" != ""){
+                alertModal("","<?php echo $this->mensaje ?>");
+                $('#alert-modal-body').css("color", "white");
+            }
+        </script>
     </body>
 </html>
 

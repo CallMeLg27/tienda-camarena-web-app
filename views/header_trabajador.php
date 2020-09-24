@@ -22,7 +22,7 @@
           <ul class="dropdown-menu">
             <!-- User image -->
             <li class="user-header">
-              <img src="public/img/users.png" class="user-image" alt="User Image"> 
+              <img src="<?php echo constant('URL'); ?>public/img/users.png" class="user-image" alt="User Image"> 
               <p id="admin">
                 <i class="fa fa-home"></i> Bienvenido<br>
                 Administrador <br> <?php echo $this->nombreUsuario ?>

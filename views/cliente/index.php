@@ -24,12 +24,11 @@
 <body>
     <?php require_once "views/header_trabajador.php" ?>
     <div class="d-flex" id="wrapper">
-        <?php require 'views/sidebar/atcliente.php'; ?>        
+        <?php require 'views/sidebar/atcliente.php'; ?>
         <div id="page-content-wrapper"class="w-100">
-            <div class=container id="contenido">
-            <div class="d-flex justify-content-center">
-                <p><?php echo $this->mensaje; ?></p>
-            </div> 
+
+            <?php require 'views/alertModal.php'; ?>
+            
             <div class="d-flex justify-content-center">
                 <h2><strong>Registrar datos</strong></h2>
             </div>
@@ -211,5 +210,12 @@
     <script src="https://kit.fontawesome.com/27d40e429f.js" crossorigin="anonymous"></script>
     <!--Script lógica de negocio-->
     <script src="<?php echo constant('URL'); ?>/public/js/scriptsCliente.js"></script> 
+    <!--Script alertModal-->
+    <script type="text/javascript" src="<?php echo constant('URL'); ?>/public/js/alertModal.js"></script>
+    <!--Ejecutamos el script alertModal-->
+    <script>
+        if ("<?php echo $this->mensaje ?>" != "")
+            alertModal("","<?php echo $this->mensaje ?>")
+    </script>
 </body>
 </html>
