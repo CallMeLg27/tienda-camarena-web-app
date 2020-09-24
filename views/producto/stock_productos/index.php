@@ -36,10 +36,10 @@
               Seleccionar
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="<?php echo constant('URL');?>stockproductos">Todos</a>
-              <a class="dropdown-item" href="<?php echo constant('URL');?>stockproductos/menorA20">Menor a 20</a>
-              <a class="dropdown-item" href="<?php echo constant('URL');?>stockproductos/menorA10">Menor a 10</a>
-              <a class="dropdown-item" href="<?php echo constant('URL');?>stockproductos/menorA5">Por vencer</a>
+              <a class="dropdown-item" href="<?php echo constant('URL');?>stockProductos">Todos</a>
+              <a class="dropdown-item" href="<?php echo constant('URL');?>stockProductos/menorA20">Menor a 20</a>
+              <a class="dropdown-item" href="<?php echo constant('URL');?>stockProductos/menorA10">Menor a 10</a>
+              <a class="dropdown-item" href="<?php echo constant('URL');?>stockProductos/menorA5">Por vencer</a>
             </div>
           </div>
           <div class="container mt-4">
