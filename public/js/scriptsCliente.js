@@ -8,8 +8,8 @@ items.forEach(item => {
     let confirm = window.confirm("Deseas eliminar el elemento?");
 
     if (confirm) {
-      httpRequest("http://localhost/miProyecto/crudcliente/eliminarCliente/" + cliente_id, function(e) {
-        // httpRequest("https://tienda-camarena.herokuapp.com/crudcliente/eliminarCliente/" + cliente_id, function(e) {
+      // httpRequest("http://localhost/miProyecto/crudcliente/eliminarCliente/" + cliente_id, function(e) {
+      httpRequest("https://tienda-camarena.herokuapp.com/crudcliente/eliminarCliente/" + cliente_id, function(e) {
         console.log(this.responseText);
         const tbody = document.querySelector("#tbody-clientes");
         const fila = document.querySelector("#fila-" + cliente_id);
@@ -50,8 +50,8 @@ botonesEditar.forEach(item => {
     } else {
       let f = document.createElement("form");
       f.setAttribute('method', "post");
-      f.setAttribute('action', "http://localhost/miProyecto/crudcliente/actualizarCliente/" + cliente_id);
-      // f.setAttribute('action', "https://tienda-camarena.herokuapp.com/crudcliente/actualizarCliente/" + cliente_id);
+      // f.setAttribute('action', "http://localhost/miProyecto/crudcliente/actualizarCliente/" + cliente_id);
+      f.setAttribute('action', "https://tienda-camarena.herokuapp.com/crudcliente/actualizarCliente/" + cliente_id);
 
       let icliente_id = document.createElement("input"); //input element, text
       icliente_id.setAttribute('type', "text");

@@ -9,8 +9,8 @@ items.forEach(item => {
     let confirm = window.confirm("Deseas eliminar el elemento?");
 
     if (confirm) {
-      httpRequest("http://localhost/miProyecto/crudproductopedido/quitarProducto/" + producto_id, function(e) {
-        // httpRequest("https://tienda-camarena.herokuapp.com/crudpedido/eliminarPedido/" + pedido_id, function(e) {
+      // httpRequest("http://localhost/miProyecto/crudproductopedido/quitarProducto/" + producto_id, function(e) {
+      httpRequest("https://tienda-camarena.herokuapp.com/crudproductopedido/quitarProducto/" + producto_id, function(e) {
         console.log(this.responseText);
         const tbody = document.querySelector("#tbody-productos");
         const fila = document.querySelector("#fila-" + producto_id);
