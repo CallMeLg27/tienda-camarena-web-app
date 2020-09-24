@@ -2,7 +2,7 @@
   <div class="sidebar-heading">
     <h4 class="center"><img src="<?php echo constant('URL'); ?>public/img/users.png" class="user-image" alt="User Image" id="Image"><br></h4><h5 class="center"><?php echo $this->nombreUsuario ?></h5></div>
   <div class="list-group list-group-flush">
-    <a href="<?php echo constant('URL'); ?>crudrecarga" class="list-group-item list-group-item-action" id="listRecarga"><i class=" fas fa-credit-card"></i>  Recargar tarjeta</a>
+    <a href="<?php echo constant('URL'); ?>crudrecarga" class="list-group-item list-group-item-action" id="listRecarga"><i class="fas fa-address-card"></i>  Recargar tarjeta</a>
     <a href="<?php echo constant('URL'); ?>crudcliente" class="list-group-item list-group-item-action"id="listClientes"><i class="fa fa-users"></i>  Clientes</a>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
