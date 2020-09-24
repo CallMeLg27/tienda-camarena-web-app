@@ -42,7 +42,7 @@
                                 <p><strong>NRO CUENTA:</strong></p>
                             </div>
                             <div class="col-md-8">
-                                <input required type="text" name="cliente_id" class="form-control" placeholder="Ingrese Nro de cuenta...">
+                                <input required type="text" name="cliente_id" class="form-control" placeholder="Ingrese Nro de cuenta..." required  pattern="^CL[0-9]{3}$">
                             </div>
                         </div>                   
                         <div class="form-row py-2">
@@ -69,7 +69,7 @@
                                 <p><strong>DNI:</strong></p>
                             </div>
                             <div class="col-md-8">
-                                <input required type="number" name="dni" class="form-control" placeholder="Ingrese su DNI...">
+                                <input required type="text" name="dni" class="form-control" placeholder="Ingrese su DNI..." required  pattern="[0-9]{8}" />
                             </div>
                         </div>
                         <div class="form-row py-2">
@@ -77,7 +77,7 @@
                                 <p><strong>EDAD:</strong></p>
                             </div>
                             <div class="col-md-8">
-                                <input required type="number" name="edad" class="form-control" placeholder="Ingrese su edad...">
+                                <input required type="number" name="edad" class="form-control" placeholder="Ingrese su edad..." min="0" max="100">
                             </div>
                         </div>
                         <div class="form-row py-2">
@@ -104,7 +104,7 @@
                                 <p><strong>TELEFONO:</strong></p>
                             </div>
                             <div class="col-md-8">
-                                <input required type="number" name="telefono" class="form-control" placeholder="Ingrese telefono...">
+                                <input required type="text" name="telefono" class="form-control" placeholder="Ingrese telefono... " >
                             </div>
                         </div>
                         <div class="form-row py-2">
@@ -112,7 +112,7 @@
                                 <p><strong>E-MAIL:</strong></p>
                             </div>
                             <div class="col-md-8">
-                                <input required type="text" name="email" class="form-control" placeholder="Ingrese e-mail...">
+                                <input required type="text" name="email" class="form-control" placeholder="Ingrese e-mail..." pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
                             </div>
                         </div>
                       </div>

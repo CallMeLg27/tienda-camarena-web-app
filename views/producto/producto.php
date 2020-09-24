@@ -38,7 +38,7 @@
                                     <p><strong>CÓDIGO:</strong></p>
                                 </div>
                                 <div class="col-md-8">
-                                    <input required name="producto_id" type="text" class="form-control" placeholder="Ingrese su código...">
+                                    <input required name="producto_id" type="text" class="form-control" placeholder="Ingrese su código..." pattern="^PR[0-9]{3}$">
                                 </div>
                             </div>
                             <div class="form-row py-2">
@@ -54,7 +54,7 @@
                                     <p><strong>COSTO:</strong></p>
                                 </div>
                                 <div class="col-md-8">
-                                    <input required name="costo" type="number" class="form-control" placeholder="Ingrese el costo...">
+                                    <input required name="costo" type="number" class="form-control" placeholder="Ingrese el costo..." min="0" />
                                 </div>
                             </div>
                             <div class="form-row py-2">
@@ -70,7 +70,7 @@
                                     <p><strong>CANTIDAD:</strong></p>
                                 </div>
                                 <div class="col-md-8">
-                                    <input required name="cantidad" type="number" class="form-control" placeholder="Ingrese la cantidad...">
+                                    <input required name="cantidad" type="number" class="form-control" placeholder="Ingrese la cantidad..." min="0"/>
                                 </div>
                             </div>
                                 <div class="d-flex flex-row justify-content-center mt-4">

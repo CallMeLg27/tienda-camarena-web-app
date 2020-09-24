@@ -97,7 +97,7 @@
                             <p><strong>CÓDIGO:</strong></p>
                         </div>
                         <div class="col-md-8">
-                            <input type="text" name="producto_id" class="form-control" placeholder="Ingrese su código...">
+                            <input type="text" name="producto_id" class="form-control" placeholder="Ingrese su código..." required  pattern="^PR[0-9]{3}$" >
                         </div>
                     </div>
                     <div class="form-row py-2">
@@ -105,7 +105,7 @@
                             <p><strong>CANTIDAD:</strong></p>
                         </div>
                         <div class="col-md-8">
-                            <input type="number" name="cantidad" class="form-control" placeholder="Ingrese cantidad...">
+                            <input type="number" name="cantidad" class="form-control" placeholder="Ingrese cantidad..." required min="0">
                         </div>
                     </div>
                     <div class="d-flex flex-row justify-content-center mt-4">
