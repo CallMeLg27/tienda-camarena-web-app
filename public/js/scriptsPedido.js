@@ -104,7 +104,8 @@ bPagar.addEventListener("click", function() {
   // httpRequest("http://localhost/miProyecto/crearpedido/ejecutar/", function(e) {
   httpRequest("https://tienda-camarena.herokuapp.com/crearpedido/ejecutar/", function(e) {
     alert("Tu compra ha sido relizada con éxito")
-    location.replace("http://localhost/miProyecto/");
+    // location.replace("http://localhost/miProyecto/");
+    location.replace("https://tienda-camarena.herokuapp.com");
   })
 });
 
