@@ -92,7 +92,7 @@ class CrudProductoModel extends Model{
     public function getMenorA20(){
         $items = [];
         try{
-            $query = $this->db->connect()->query('SELECT * FROM producto where cantidad<10');
+            $query = $this->db->connect()->query('SELECT * FROM producto where cantidad<20');
             
             while($row = $query->fetch()){
                 $item = new Producto();
