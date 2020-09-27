@@ -9,8 +9,8 @@ class Login extends Controller{
     function autenticar(){
         $usuario = $_POST["username"];
         $contra = $_POST["password"];
-        echo '<p>'.$_POST["username"].'</p>';
-        echo '<p>'.$_POST["password"].'</p>';
+        // echo '<p>'.$_POST["username"].'</p>';
+        // echo '<p>'.$_POST["password"].'</p>';
         $usuarioActivo = $this->model->getByCredentials($usuario, $contra);
         if($usuarioActivo==null){
             $this->view->mensaje="Acceso incorrecto";
