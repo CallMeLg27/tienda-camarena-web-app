@@ -9,8 +9,7 @@ items.forEach(item => {
     let confirm = window.confirm("Deseas eliminar el elemento?");
 
     if (confirm) {
-      // httpRequest("http://localhost/miProyecto/crudproductopedido/quitarProducto/" + producto_id, function(e) {
-      httpRequest("https://tienda-camarena.herokuapp.com/crudproductopedido/quitarProducto/" + producto_id, function(e) {
+      httpRequest(url + "crudproductopedido/quitarProducto/" + producto_id, function(e) {
         console.log(this.responseText);
         const tbody = document.querySelector("#tbody-productos");
         const fila = document.querySelector("#fila-" + producto_id);
@@ -45,7 +44,7 @@ botonesEditar.forEach(item => {
     } else {
       let f = document.createElement("form");
       f.setAttribute('method', "post");
-      f.setAttribute('action', "https://tienda-camarena.herokuapp.com/crudpedido/actualizarPedido/" + pedido_id);
+      f.setAttribute('action', url + "crudpedido/actualizarPedido/" + pedido_id);
 
       let ipedido_id = document.createElement("input"); //input element, text
       ipedido_id.setAttribute('type', "text");
@@ -101,11 +100,9 @@ botonesEditar.forEach(item => {
 });
 
 bPagar.addEventListener("click", function() {
-  // httpRequest("http://localhost/miProyecto/crearpedido/ejecutar/", function(e) {
-  httpRequest("https://tienda-camarena.herokuapp.com/crearpedido/ejecutar/", function(e) {
+  httpRequest(url + "crearpedido/ejecutar/", function(e) {
     alert("Tu compra ha sido relizada con éxito")
-    // location.replace("http://localhost/miProyecto/");
-    location.replace("https://tienda-camarena.herokuapp.com");
+    location.replace(url);
   })
 });
 

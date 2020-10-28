@@ -8,8 +8,7 @@ items.forEach(item => {
     let confirm = window.confirm("Deseas eliminar el elemento?");
 
     if (confirm) {
-      // httpRequest("http://localhost/miProyecto/crudproducto/eliminarProducto/" + producto_id, function(e) {
-      httpRequest("https://tienda-camarena.herokuapp.com/crudproducto/eliminarProducto/" + producto_id, function(e) {
+      httpRequest(utl + "/crudproducto/eliminarProducto/" + producto_id, function(e) {
         console.log(this.responseText);
         const tbody = document.querySelector("#tbody-productos");
         const fila = document.querySelector("#fila-" + producto_id);
@@ -44,8 +43,7 @@ botonesEditar.forEach(item => {
     } else {
       let f = document.createElement("form");
       f.setAttribute('method', "post");
-      // f.setAttribute('action', "http://localhost/miProyecto/crudproducto/actualizarProducto/" + producto_id);
-      f.setAttribute('action', "https://tienda-camarena.herokuapp.com/crudproducto/actualizarProducto/" + producto_id);
+      f.setAttribute('action', url + "crudproducto/actualizarProducto/" + producto_id);
 
       let iproducto_id = document.createElement("input"); //input element, text
       iproducto_id.setAttribute('type', "text");
