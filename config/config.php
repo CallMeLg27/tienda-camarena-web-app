@@ -11,13 +11,17 @@
 // --deployed
 if (isset($_ENV["HOST"])){
     define('URL', 'https://tienda-camarena-new.herokuapp.com/');
+    define('HOST', $_ENV["HOST"]);
+    define('DB', $_ENV["DB"]);
+    define('USER', $_ENV["USER"]);
+    define('PASSWORD', $_ENV["PASSWORD"]);
 }else{
     define('URL', 'http://localhost/tienda-camarena-web-app/');
+    define('HOST', "localhost");
+    define('DB', "tienda_camarena");
+    define('USER', "root");
+    define('PASSWORD', "");
 }
-define('HOST', $_ENV["HOST"] || "localhost");
-define('DB', $_ENV["DB"] || "tienda_camarena");
-define('USER', $_ENV["USER"] || "root");
-define('PASSWORD', $_ENV["PASSWORD"] || "");
 define('CHARSET', 'utf8mb4');
  ?>
 <script>
