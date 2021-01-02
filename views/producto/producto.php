@@ -157,8 +157,5 @@
             if ("<?php echo $this->mensaje ?>" != "")
                 alertModal("","<?php echo $this->mensaje ?>")
         </script>
-        <?php
-        echo $_ENV["test"]
-        ?>
     </body>
 </html>
