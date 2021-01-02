@@ -10,10 +10,10 @@
  
 // --deployed
 define('URL', 'https://tienda-camarena.herokuapp.com/');
-define('HOST', 'us-cdbr-east-02.cleardb.com');
-define('DB', 'heroku_ba968b3eda52761');
-define('USER', 'b3d547a75782db');
-define('PASSWORD', "0d75eb3b");
+define('HOST', 'bj4sgmoxelwnwolswpjp-mysql.services.clever-cloud.com');
+define('DB', 'bj4sgmoxelwnwolswpjp');
+define('USER', 'u8p1jph3x2kocf49');
+define('PASSWORD', "I6o2g6EVlzPV3mhjuszs");
 define('CHARSET', 'utf8mb4');
  ?>
 <script>
