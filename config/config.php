@@ -10,7 +10,7 @@
  
 // --deployed
 if (isset($_ENV["DB_HOST"])){
-    define('URL', 'https://tienda-camarena-new.herokuapp.com/');
+    define('URL', 'https://tienda-camarena.herokuapp.com/');
     define('HOST', $_ENV["DB_HOST"]);
     define('DB', $_ENV["DB"]);
     define('USER', $_ENV["DB_USER"]);
