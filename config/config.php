@@ -22,6 +22,7 @@ if (isset($_ENV["DB_HOST"])){
     define('USER', "root");
     define('PASSWORD', "");
 }
+echo isset($_ENV["DB_HOST"]);
 define('CHARSET', 'utf8mb4');
  ?>
 <script>
