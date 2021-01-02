@@ -9,7 +9,7 @@
 // define('CHARSET', 'utf8mb4');
  
 // --deployed
-define('URL', 'https://tienda-camarena.herokuapp.com/');
+define('URL', 'https://tienda-camarena-new.herokuapp.com/');
 define('HOST', 'bj4sgmoxelwnwolswpjp-mysql.services.clever-cloud.com');
 define('DB', 'bj4sgmoxelwnwolswpjp');
 define('USER', 'u8p1jph3x2kocf49');
