@@ -10,7 +10,9 @@ class CrudProductopedidoModel extends Model{
 
     public function insert($datos){
         // insertar
+        echo "-before prepare-";
         $query = $this->db->connect()->prepare('INSERT INTO PRODUCTOPEDIDO (producto_id, pedido_id, cantidad) VALUES(:producto_id, :pedido_id, :cantidad)');
+        echo "-after prepare-";
         try{
             $query->execute([
                 'producto_id' => $datos['producto_id'],
