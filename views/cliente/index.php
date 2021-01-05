@@ -24,7 +24,7 @@
 <body>
     <?php require_once "views/header_trabajador.php" ?>
     <div class="d-flex" id="wrapper">
-        <?php require 'views/sidebar/atcliente.php'; ?>
+        <?php require 'views/sidebar/atCliente.php'; ?>
         <div id="page-content-wrapper"class="w-100">
 
             <?php require 'views/alertModal.php'; ?>
