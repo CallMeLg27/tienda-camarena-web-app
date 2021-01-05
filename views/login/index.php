@@ -17,7 +17,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo constant('URL'); ?>public/css/body.css">           
     </head>
     <body>
-        <?php require 'views/alertModal.php'; ?>
+        <?php require_once 'views/alertModal.php'; ?>
         <div class="container d-flex justify-content-center" >
             <div class="col-sm-8 ">
                 <div class="row">

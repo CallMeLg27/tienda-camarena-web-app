@@ -24,7 +24,7 @@
 <?php require_once "views/header_trabajador.php" ?>      
 <body>    
     <div class="d-flex" id="wrapper">
-        <?php require 'views/sidebar/admin.php'; ?>         
+        <?php require_once 'views/sidebar/admin.php'; ?>         
         <div id="page-content-wrapper"class="w-100">
             <div class=container id="contenido">          
                 <div class="center d-flex justify-content-center">

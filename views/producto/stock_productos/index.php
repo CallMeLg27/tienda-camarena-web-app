@@ -25,7 +25,7 @@
   <body>
     <?php require_once 'views/header_trabajador.php'; ?>   
     <div class="d-flex" id="wrapper">    
-      <?php require 'views/sidebar/almacenero.php'; ?>
+      <?php require_once 'views/sidebar/almacenero.php'; ?>
       <div id="page-content-wrapper"class="w-100">
         <div class="container" id="contenido">
           <div class="d-flex justify-content-center" id="title">
@@ -84,7 +84,7 @@
       
       <!-- /#page-content-wrapper -->
     </div> 
-    <?php require 'views/footer.php'; ?> 
+    <?php require_once 'views/footer.php'; ?> 
     <!--Iconos--> 
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <!--CDN JQuery,Popper,Bootstrap (JS)-->

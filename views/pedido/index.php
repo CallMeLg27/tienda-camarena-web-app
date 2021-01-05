@@ -27,7 +27,7 @@
             <div class="d-flex justify-content-center">
                 <h2><strong>Registra tu pedido</strong></h2>
             </div>
-            <?php require 'views/alertModal.php'; ?>
+            <?php require_once 'views/alertModal.php'; ?>
 <!--             <p>Producto:</p>
             <?php var_dump($this->producto); ?>
             <p>nombreUsuario:</p>

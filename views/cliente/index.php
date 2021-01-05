@@ -24,10 +24,10 @@
 <body>
     <?php require_once "views/header_trabajador.php" ?>
     <div class="d-flex" id="wrapper">
-        <?php require 'views/sidebar/atCliente.php'; ?>
+        <?php require_once 'views/sidebar/atCliente.php'; ?>
         <div id="page-content-wrapper"class="w-100">
 
-            <?php require 'views/alertModal.php'; ?>
+            <?php require_once 'views/alertModal.php'; ?>
             
             <div class="d-flex justify-content-center">
                 <h2><strong>Registrar datos</strong></h2>
@@ -202,7 +202,7 @@
             </div>
         </div>        
     </div>
-    <?php require 'views/footer.php'; ?> 
+    <?php require_once 'views/footer.php'; ?> 
      <!--CDN JQuery,Popper,Bootstrap (JS)-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
