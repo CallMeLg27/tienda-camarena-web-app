@@ -10,7 +10,7 @@ class CrudPromocionModel extends Model{
 
     public function insert($datos){
         // insertar
-        $query = $this->db->connect()->prepare('INSERT INTO PROMOCION (promocion_id, NOMBRE, descripcion, cantidad, producto_id, costo) VALUES(:promocion_id, :nombre, :descripcion, :cantidad, :producto_id, :costo)');
+        $query = $this->db->connect()->prepare('INSERT INTO promocion (promocion_id, NOMBRE, descripcion, cantidad, producto_id, costo) VALUES(:promocion_id, :nombre, :descripcion, :cantidad, :producto_id, :costo)');
         try{
             $query->execute([
                 'promocion_id' => $datos['promocion_id'],

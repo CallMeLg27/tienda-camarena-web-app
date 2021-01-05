@@ -10,7 +10,7 @@ class CrudTarjetaModel extends Model{
 
     public function insert($datos){
         // insertar
-        $query = $this->db->connect()->prepare('INSERT INTO TARJETA (tarjeta_id, cliente_id, fechavencimiento, saldo) VALUES(:tarjeta_id, :cliente_id, :fechavencimiento, :saldo)');
+        $query = $this->db->connect()->prepare('INSERT INTO tarjeta (tarjeta_id, cliente_id, fechavencimiento, saldo) VALUES(:tarjeta_id, :cliente_id, :fechavencimiento, :saldo)');
         try{
             $query->execute([
                 'tarjeta_id' => $datos['tarjeta_id'],

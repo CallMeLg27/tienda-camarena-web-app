@@ -10,7 +10,7 @@ class CrudClienteModel extends Model{
 
     public function insert($datos){
         // insertar
-        $query = $this->db->connect()->prepare('INSERT INTO CLIENTE (cliente_id, nombre, apellido, dni, telefono, edad, email, distrito, direccion, estado) VALUES(:cliente_id, :nombre, :apellido, :dni, :telefono, :edad, :email, :distrito, :direccion, :estado)');
+        $query = $this->db->connect()->prepare('INSERT INTO cliente (cliente_id, nombre, apellido, dni, telefono, edad, email, distrito, direccion, estado) VALUES(:cliente_id, :nombre, :apellido, :dni, :telefono, :edad, :email, :distrito, :direccion, :estado)');
         try{
             $query->execute([
                 'cliente_id' => $datos['cliente_id'],

@@ -11,7 +11,7 @@ class CrudPedidoModel extends Model{
 
     public function insert($datos){
         // insertar
-        $query = $this->db->connect()->prepare('INSERT INTO PEDIDO (pedido_id, cliente_id) VALUES(:pedido_id, :cliente_id');
+        $query = $this->db->connect()->prepare('INSERT INTO pedido (pedido_id, cliente_id) VALUES(:pedido_id, :cliente_id');
         try{
             $query->execute([
                 'pedido_id' => $datos['pedido_id'],

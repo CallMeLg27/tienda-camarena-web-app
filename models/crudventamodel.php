@@ -10,7 +10,7 @@ class CrudVentaModel extends Model{
 
     public function insert($datos){
         // insertar
-        $query = $this->db->connect()->prepare('INSERT INTO VENTA (venta_id, pedido_id, descripcion, monto, fecha) VALUES(:venta_id, :pedido_id, :descripcion, :monto, :fecha)');
+        $query = $this->db->connect()->prepare('INSERT INTO venta (venta_id, pedido_id, descripcion, monto, fecha) VALUES(:venta_id, :pedido_id, :descripcion, :monto, :fecha)');
         try{
             $query->execute([
                 'venta_id' => $datos['venta_id'],

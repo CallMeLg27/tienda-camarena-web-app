@@ -10,7 +10,7 @@ class CrudUsuarioModel extends Model{
 
     public function insert($datos){
         // insertar
-        $query = $this->db->connect()->prepare('INSERT INTO USUARIO (usuario_id, nombre, apellido, dni, telefono, edad, email, distrito, direccion, estado) VALUES(:usuario_id, :nombre, :apellido, :dni, :telefono, :edad, :email, :distrito, :direccion, :estado)');
+        $query = $this->db->connect()->prepare('INSERT INTO usuario (usuario_id, nombre, apellido, dni, telefono, edad, email, distrito, direccion, estado) VALUES(:usuario_id, :nombre, :apellido, :dni, :telefono, :edad, :email, :distrito, :direccion, :estado)');
         try{
             $query->execute([
                 'usuario_id' => $datos['usuario_id'],

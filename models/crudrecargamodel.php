@@ -10,7 +10,7 @@ class CrudRecargaModel extends Model{
 
     public function insert($datos){
         // insertar
-        $query = $this->db->connect()->prepare('INSERT INTO RECARGA (recarga_id, nombre, apellido, dni, telefono, edad, email, distrito, direccion, estado) VALUES(:recarga_id, :nombre, :apellido, :dni, :telefono, :edad, :email, :distrito, :direccion, :estado)');
+        $query = $this->db->connect()->prepare('INSERT INTO recarga (recarga_id, nombre, apellido, dni, telefono, edad, email, distrito, direccion, estado) VALUES(:recarga_id, :nombre, :apellido, :dni, :telefono, :edad, :email, :distrito, :direccion, :estado)');
         try{
             $query->execute([
                 'recarga_id' => $datos['recarga_id'],
