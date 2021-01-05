@@ -57,11 +57,13 @@ class CrearPedido extends Controller{
 
         // Se intenta añadir el producto a la BD
         $crudproductopedidomodel = new CrudProductopedidoModel();
+        echo "before";
         if($crudproductopedidomodel->insert(['producto_id' => $producto_id, 'pedido_id' => $this->pedido_actual_id, 'cantidad' => $cantidad])){
             $this->view->mensaje = "Producto añadido correctamente";
-            // $this->view->render('producto/index');
+            echo 1;
             $this->render();
         }else{
+            echo 2;
             $this->render();
         }
     }
