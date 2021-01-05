@@ -2,13 +2,13 @@ const items = document.querySelectorAll(".bEliminar");
 const botonesEditar = document.querySelectorAll(".bEditar");
 
 items.forEach(item => {
-  item.addEventListener("click", function() {
+  item.addEventListener("click", function () {
     let producto_id = this.dataset.producto_id;
     // alert(this.dataset.producto_id);
     let confirm = window.confirm("Deseas eliminar el elemento?");
 
     if (confirm) {
-      httpRequest(utl + "/crudproducto/eliminarProducto/" + producto_id, function(e) {
+      httpRequest(url + "/crudproducto/eliminarProducto/" + producto_id, function (e) {
         console.log(this.responseText);
         const tbody = document.querySelector("#tbody-productos");
         const fila = document.querySelector("#fila-" + producto_id);
@@ -20,7 +20,7 @@ items.forEach(item => {
 
 botonesEditar.forEach(item => {
   item.estado = 1;
-  item.addEventListener("click", function() {
+  item.addEventListener("click", function () {
     let producto_id = this.dataset.producto_id;
     console.log(this.dataset.producto_id);
     let tbody = document.querySelector("#tbody-productos");
@@ -99,12 +99,12 @@ botonesEditar.forEach(item => {
 });
 
 
-function httpRequest(url, callback) {
+function httpRequest (url, callback) {
   const http = new XMLHttpRequest();
   http.open("GET", url);
   http.send();
 
-  http.onreadystatechange = function() {
+  http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       callback.apply(http);
     }
