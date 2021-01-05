@@ -25,7 +25,7 @@ class CrearPedido extends Controller{
 
     function render(){
         $this->sendDataToView();
-        $this->view->render('pedido/index.php');
+        $this->view->render('pedido/index');
     }
 
     function crear(){
